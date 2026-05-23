@@ -1,0 +1,9 @@
+#!/bin/bash
+
+serve() {
+  server --dir site --port 8005
+}
+
+deploy() {
+  lift deploy
+}
