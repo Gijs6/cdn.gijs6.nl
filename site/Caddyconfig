@@ -1,0 +1,10 @@
+@cdn.gijs6.nl host cdn.gijs6.nl
+handle @cdn.gijs6.nl {
+    handle_path /blog/exam-design/* {
+        redir /blog/archived/exam-design{path} 301
+    }
+
+    handle_path /blog/new-exam-design/* {
+        redir /blog/archived/new-exam-design{path} 301
+    }
+}
