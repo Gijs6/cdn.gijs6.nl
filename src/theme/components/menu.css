@@ -1,0 +1,87 @@
+.menu {
+    min-inline-size: 11rem;
+    max-inline-size: 18rem;
+    padding: var(--sp-2xs);
+    margin: 0;
+    list-style: none;
+    background: var(--surface-raised);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius);
+}
+.menu li {
+    margin: 0;
+}
+.menu a,
+.menu button {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    inline-size: 100%;
+    padding: var(--sp-2xs) var(--sp-xs);
+    font: inherit;
+    font-weight: var(--weight-regular);
+    color: var(--fg);
+    text-align: start;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: 2px;
+}
+.menu a:hover,
+.menu button:hover,
+.menu a.is-active,
+.menu button.is-active {
+    background: var(--gray-1);
+}
+.menu a svg,
+.menu button svg {
+    inline-size: 1.05rem;
+    block-size: 1.05rem;
+    flex: none;
+    color: var(--faint);
+    stroke: currentColor;
+}
+.menu .is-danger {
+    color: var(--bad);
+}
+.menu .is-danger svg {
+    color: currentColor;
+}
+.menu [aria-disabled="true"] {
+    color: var(--faint);
+    pointer-events: none;
+}
+.menu__shortcut {
+    margin-inline-start: auto;
+    font-family: var(--font-mono);
+    font-size: var(--t--1);
+    color: var(--faint);
+}
+.menu__label {
+    padding: var(--sp-2xs) var(--sp-xs);
+    font-size: var(--t--1);
+    font-weight: var(--weight-semibold);
+    color: var(--faint);
+}
+.menu__separator {
+    block-size: var(--border-width);
+    margin: var(--sp-2xs) 0;
+    background: var(--border);
+}
+
+.menu-anchor {
+    position: relative;
+    display: inline-block;
+}
+.menu-anchor > .menu {
+    position: absolute;
+    inset-block-start: calc(100% + var(--sp-2xs));
+    inset-inline-start: 0;
+    z-index: var(--z-dialog);
+}
+.menu-anchor--end > .menu {
+    inset-inline: auto 0;
+}
+.menu-anchor > .menu[hidden] {
+    display: none;
+}

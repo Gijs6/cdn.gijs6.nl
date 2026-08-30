@@ -1,0 +1,101 @@
+.table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    font-size: var(--t--1);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.table thead {
+    background: var(--gray-1);
+}
+.table th {
+    text-align: start;
+    font-weight: var(--weight-bold);
+    white-space: nowrap;
+}
+.table th,
+.table td {
+    padding: var(--sp-xs) var(--sp-sm);
+    border-block-end: var(--border-width) solid var(--border);
+    vertical-align: top;
+}
+.table th:not(:last-child),
+.table td:not(:last-child) {
+    border-inline-end: var(--border-width) solid var(--border);
+}
+.table tbody tr:last-child td {
+    border-block-end: 0;
+}
+.table tbody tr:nth-child(even) {
+    background: var(--surface-sunk);
+}
+.table td--num,
+.table th--num {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+}
+.table td--shrink {
+    inline-size: 1%;
+    white-space: nowrap;
+}
+
+.table--rows {
+    border-inline: 0;
+    border-radius: 0;
+}
+.table--rows th,
+.table--rows td {
+    border-inline: 0;
+}
+.table--compact th,
+.table--compact td {
+    padding: var(--sp-3xs) var(--sp-xs);
+}
+.table--fixed {
+    table-layout: fixed;
+}
+
+.table--hover tbody tr:hover td {
+    background: var(--gray-1);
+}
+.table tbody tr.is-selected td,
+.table tbody tr[aria-selected="true"] td {
+    background: var(--accent-wash);
+}
+
+.table__sort {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    font: inherit;
+    font-weight: var(--weight-bold);
+    color: inherit;
+}
+.table__sort svg {
+    inline-size: 0.9em;
+    block-size: 0.9em;
+    color: var(--faint);
+    stroke: currentColor;
+}
+.table__sort[aria-sort="ascending"] svg,
+.table__sort[aria-sort="descending"] svg {
+    color: var(--accent-text);
+}
+
+.table__empty {
+    padding: var(--sp-xl);
+    text-align: center;
+    color: var(--faint);
+}
+
+.table-wrap {
+    inline-size: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    border-radius: var(--radius);
+}
+.table-wrap .table {
+    border-radius: 0;
+}

@@ -1,0 +1,112 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    padding: var(--sp-3xs) var(--sp-xs);
+    font-size: var(--t--1);
+    font-weight: var(--weight-semibold);
+    line-height: 1.5;
+    white-space: nowrap;
+    color: var(--muted);
+    background: var(--gray-1);
+    border-radius: var(--radius);
+}
+.badge svg,
+.badge .icon {
+    inline-size: 0.9em;
+    block-size: 0.9em;
+    stroke: currentColor;
+}
+.badge--ok {
+    color: var(--ok-text);
+    background: var(--ok-wash);
+}
+.badge--bad {
+    color: var(--bad-text);
+    background: var(--bad-wash);
+}
+.badge--warn {
+    color: var(--warn-text);
+    background: var(--warn-wash);
+}
+.badge--info {
+    color: var(--info-text);
+    background: var(--info-wash);
+}
+.badge--accent {
+    color: var(--accent-text);
+    background: var(--accent-wash);
+}
+.badge--outline {
+    background: none;
+    border: var(--border-width) solid currentColor;
+}
+.badge--dot::before {
+    content: "";
+    inline-size: 0.5em;
+    block-size: 0.5em;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    padding: var(--sp-3xs) var(--sp-2xs) var(--sp-3xs) var(--sp-xs);
+    font-size: var(--t--1);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius);
+}
+.tag--plain {
+    padding-inline-end: var(--sp-xs);
+}
+.tag__remove {
+    display: grid;
+    place-items: center;
+    inline-size: 1.15rem;
+    block-size: 1.15rem;
+    color: var(--faint);
+    border-radius: 2px;
+}
+.tag__remove:hover {
+    color: var(--fg);
+    background: var(--gray-2);
+}
+.tag__remove svg {
+    inline-size: 0.75rem;
+    block-size: 0.75rem;
+    stroke: currentColor;
+}
+
+.count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-inline-size: 1.4em;
+    padding: var(--sp-3xs) var(--sp-xs);
+    font-size: var(--t--1);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    background: var(--gray-2);
+    border-radius: 999px;
+}
+.count--accent {
+    color: var(--on-accent);
+    background: var(--accent);
+}
+.count--bad {
+    color: var(--on-accent);
+    background: var(--bad-solid);
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    padding: var(--sp-3xs) var(--sp-sm);
+    font-size: var(--t--1);
+    font-weight: var(--weight-semibold);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: 999px;
+}

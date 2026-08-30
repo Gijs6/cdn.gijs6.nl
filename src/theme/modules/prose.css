@@ -1,0 +1,97 @@
+.prose {
+    max-inline-size: var(--prose-max);
+    font-size: var(--t-0);
+    line-height: 1.7;
+}
+.prose > * + * {
+    margin-block-start: var(--sp-md);
+}
+.prose h2 {
+    margin-block-start: var(--sp-xl);
+    font-size: var(--t-2);
+}
+.prose h3 {
+    margin-block-start: var(--sp-lg);
+    font-size: var(--t-1);
+}
+.prose h4 {
+    margin-block-start: var(--sp-md);
+}
+.prose h2 + *,
+.prose h3 + *,
+.prose h4 + * {
+    margin-block-start: var(--sp-sm);
+}
+
+.prose ul,
+.prose ol {
+    padding-inline-start: 1.5em;
+}
+.prose li {
+    margin-block: var(--sp-2xs);
+}
+.prose li > ul,
+.prose li > ol {
+    margin-block: var(--sp-2xs);
+}
+
+.prose blockquote {
+    font-size: var(--t-1);
+    color: var(--muted);
+}
+.prose img,
+.prose figure {
+    margin-block: var(--sp-lg);
+}
+.prose figure img {
+    margin: 0;
+}
+
+.prose hr {
+    margin-block: var(--sp-2xl);
+}
+
+.prose pre {
+    margin-block: var(--sp-lg);
+}
+.prose :not(pre) > code {
+    font-size: 0.9em;
+}
+
+.prose table {
+    margin-block: var(--sp-lg);
+    font-size: var(--t-0);
+}
+
+.prose a {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-wash);
+}
+.prose a:hover {
+    text-decoration-color: currentColor;
+}
+
+.prose h2:target,
+.prose h3:target {
+    scroll-margin-block-start: calc(var(--bar-h) + var(--sp-lg));
+}
+.prose :is(h2, h3, h4) .anchor {
+    margin-inline-start: 0.4em;
+    color: var(--faint);
+    opacity: 0;
+    text-decoration: none;
+}
+.prose :is(h2, h3, h4):hover .anchor {
+    opacity: 1;
+}
+
+.prose .lead {
+    font-size: var(--t-1);
+    color: var(--muted);
+}
+.prose .footnotes {
+    margin-block-start: var(--sp-2xl);
+    padding-block-start: var(--sp-md);
+    font-size: var(--t--1);
+    border-block-start: var(--border-width) solid var(--border);
+}

@@ -1,0 +1,59 @@
+.diff {
+    font-family: var(--font-mono);
+    font-size: var(--t--1);
+    line-height: 1.5;
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.diff__hunk {
+    padding: var(--sp-2xs) var(--sp-sm);
+    color: var(--faint);
+    background: var(--surface-sunk);
+    border-block: var(--border-width) solid var(--border);
+}
+.diff__hunk:first-child {
+    border-block-start: 0;
+}
+.diff__line {
+    display: grid;
+    grid-template-columns: 3ch 3ch 1fr;
+    gap: var(--sp-sm);
+    padding-inline: var(--sp-sm);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+.diff__gutter {
+    color: var(--faint);
+    text-align: end;
+    user-select: none;
+}
+.diff__line--add {
+    background: var(--ok-wash);
+}
+.diff__line--add .diff__text::before {
+    content: "+";
+    color: var(--ok);
+}
+.diff__line--del {
+    background: var(--bad-wash);
+}
+.diff__line--del .diff__text::before {
+    content: "-";
+    color: var(--bad);
+}
+.diff__line--ctx .diff__text::before {
+    content: " ";
+}
+.diff__text::before {
+    margin-inline-end: 0.5ch;
+}
+
+.diff--inline ins {
+    background: var(--ok-wash);
+    text-decoration: none;
+}
+.diff--inline del {
+    background: var(--bad-wash);
+    text-decoration: line-through;
+}

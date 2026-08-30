@@ -1,0 +1,70 @@
+.file-drop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2xs);
+    padding: var(--sp-xl);
+    text-align: center;
+    color: var(--muted);
+    background: var(--surface-sunk);
+    border: 2px dashed var(--border-strong);
+    border-radius: var(--radius);
+    transition:
+        border-color var(--transition),
+        background var(--transition);
+}
+.file-drop input[type="file"] {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-drop:hover,
+.file-drop.is-dragover {
+    border-color: var(--accent);
+    background: var(--accent-wash);
+}
+.file-drop__icon {
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    color: var(--faint);
+    stroke: currentColor;
+}
+.file-drop__primary {
+    font-weight: var(--weight-semibold);
+    color: var(--fg);
+}
+.file-drop__hint {
+    font-size: var(--t--1);
+    color: var(--faint);
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2xs);
+    margin-block-start: var(--sp-sm);
+}
+.file-list__item {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    padding: var(--sp-2xs) var(--sp-sm);
+    font-size: var(--t--1);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+}
+.file-list__name {
+    flex: 1;
+    min-inline-size: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.file-list__size {
+    color: var(--faint);
+}

@@ -1,0 +1,82 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3xs);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav--stack {
+    flex-direction: column;
+}
+.nav a,
+.nav button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-xs);
+    padding: var(--sp-2xs) var(--sp-sm);
+    font: inherit;
+    font-weight: var(--weight-semibold);
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+.nav a:hover,
+.nav button:hover {
+    color: var(--fg);
+    background: var(--gray-1);
+}
+.nav a[aria-current],
+.nav a.is-active {
+    color: var(--accent-text);
+    background: var(--accent-wash);
+}
+.nav a svg,
+.nav button svg {
+    inline-size: 1em;
+    block-size: 1em;
+    stroke: currentColor;
+}
+
+.nav--underline {
+    gap: var(--sp-md);
+    border-block-end: var(--border-width) solid var(--border);
+}
+.nav--underline a {
+    padding-inline: 0;
+    padding-block: var(--sp-xs);
+    border-radius: 0;
+    border-block-end: 2px solid transparent;
+    margin-block-end: -1px;
+}
+.nav--underline a:hover {
+    background: none;
+}
+.nav--underline a[aria-current] {
+    background: none;
+    border-block-end-color: var(--accent);
+}
+
+.nav--pills a[aria-current] {
+    color: var(--on-accent);
+    background: var(--accent);
+}
+
+.skip-link {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: var(--sp-sm);
+    z-index: var(--z-toast);
+    padding: var(--sp-xs) var(--sp-sm);
+    color: var(--on-accent);
+    background: var(--accent);
+    border-radius: 0 0 var(--radius) var(--radius);
+    transform: translateY(-100%);
+    transition: transform var(--transition);
+}
+.skip-link:focus-visible {
+    transform: none;
+}

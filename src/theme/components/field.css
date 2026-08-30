@@ -1,0 +1,128 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2xs);
+}
+
+.field__label {
+    font-weight: var(--weight-semibold);
+}
+.field__label--optional::after {
+    content: "optional";
+    margin-inline-start: var(--sp-2xs);
+    font-weight: var(--weight-regular);
+    font-size: var(--t--1);
+    color: var(--faint);
+}
+.field__label--required::after {
+    content: "*";
+    margin-inline-start: var(--sp-3xs);
+    color: var(--bad);
+}
+
+.field__control {
+    inline-size: 100%;
+    max-inline-size: var(--field-max, 24rem);
+    padding: var(--sp-xs) var(--sp-sm);
+    color: var(--fg);
+    background: var(--field-bg);
+    border: var(--border-width) solid var(--field-border);
+    border-radius: var(--radius);
+    transition: border-color var(--transition);
+}
+.field__control:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent);
+}
+.field__control:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+textarea.field__control {
+    min-block-size: 6em;
+}
+.field__control--full {
+    max-inline-size: none;
+}
+
+.field__hint {
+    font-size: var(--t--1);
+    color: var(--faint);
+}
+.field__error {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    font-size: var(--t--1);
+    font-weight: var(--weight-semibold);
+    color: var(--bad);
+}
+.field__error svg {
+    inline-size: 1em;
+    block-size: 1em;
+    flex: none;
+    stroke: currentColor;
+}
+
+.field--invalid .field__control {
+    border-color: var(--bad);
+}
+.field--invalid .field__control:focus-visible {
+    outline-color: var(--bad);
+}
+
+.field--inline {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--sp-sm);
+}
+.field--inline .field__label {
+    font-weight: var(--weight-regular);
+    order: 2;
+}
+.field--inline .field__control {
+    inline-size: auto;
+}
+
+.field--check {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--sp-sm);
+}
+.field--check input {
+    margin-block-start: var(--sp-3xs);
+}
+.field--check .field__label {
+    font-weight: var(--weight-regular);
+}
+.field--check .field__hint {
+    flex-basis: 100%;
+    margin-inline-start: calc(1.1em + var(--sp-sm));
+}
+
+.choice-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-xs);
+}
+.choice-list--row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--sp-md);
+}
+.choice-list label {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    font-weight: var(--weight-regular);
+}
+
+.field-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-md);
+}
+.field-row > .field {
+    flex: 1 1 12rem;
+}

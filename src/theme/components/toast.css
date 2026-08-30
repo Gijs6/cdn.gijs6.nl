@@ -1,0 +1,101 @@
+.toaster {
+    position: fixed;
+    inset-block-end: var(--sp-md);
+    inset-inline-end: var(--sp-md);
+    z-index: var(--z-toast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+    max-inline-size: min(24rem, calc(100vw - var(--sp-xl)));
+}
+.toaster--start {
+    inset-inline: var(--sp-md) auto;
+}
+.toaster--top {
+    inset-block: var(--sp-md) auto;
+}
+
+.toast {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-sm);
+    padding: var(--sp-sm) var(--sp-md);
+    font-weight: var(--weight-medium);
+    background: var(--surface-raised);
+    border: var(--border-width) solid var(--border-strong);
+    border-inline-start-width: 3px;
+    border-radius: var(--radius);
+}
+.toast__icon {
+    flex: none;
+    inline-size: 1.1rem;
+    block-size: 1.1rem;
+    margin-block-start: var(--sp-3xs);
+    stroke: currentColor;
+}
+.toast__body {
+    flex: 1;
+    min-inline-size: 0;
+}
+.toast__dismiss {
+    flex: none;
+    display: grid;
+    place-items: center;
+    inline-size: 1.4rem;
+    block-size: 1.4rem;
+    color: var(--faint);
+    border-radius: 2px;
+}
+.toast__dismiss:hover {
+    color: var(--fg);
+    background: var(--gray-1);
+}
+.toast__dismiss svg {
+    inline-size: 0.85rem;
+    block-size: 0.85rem;
+    stroke: currentColor;
+}
+
+.toast--success {
+    border-inline-start-color: var(--ok);
+}
+.toast--success .toast__icon {
+    color: var(--ok);
+}
+.toast--danger {
+    border-inline-start-color: var(--bad);
+}
+.toast--danger .toast__icon {
+    color: var(--bad);
+}
+.toast--warning {
+    border-inline-start-color: var(--warn);
+}
+.toast--warning .toast__icon {
+    color: var(--warn);
+}
+.toast--info {
+    border-inline-start-color: var(--info);
+}
+.toast--info .toast__icon {
+    color: var(--info);
+}
+
+.toast[data-enter] {
+    animation: toast-in var(--transition);
+}
+.toast.is-leaving {
+    animation: toast-out var(--transition) forwards;
+}
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(var(--sp-sm));
+    }
+}
+@keyframes toast-out {
+    to {
+        opacity: 0;
+        transform: translateY(var(--sp-sm));
+    }
+}

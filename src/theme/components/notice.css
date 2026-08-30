@@ -1,0 +1,109 @@
+.notice {
+    display: flex;
+    gap: var(--sp-sm);
+    padding: var(--sp-sm) var(--sp-md);
+    background: var(--surface);
+    border: var(--border-width) solid var(--border);
+    border-inline-start-width: 3px;
+    border-radius: var(--radius);
+}
+.notice__icon {
+    flex: none;
+    inline-size: 1.15rem;
+    block-size: 1.15rem;
+    margin-block-start: var(--sp-3xs);
+    stroke: currentColor;
+}
+.notice__body {
+    min-inline-size: 0;
+}
+.notice__body > :first-child {
+    margin-block-start: 0;
+}
+.notice__body > :last-child {
+    margin-block-end: 0;
+}
+.notice__title {
+    font-weight: var(--weight-bold);
+}
+.notice__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-sm);
+    margin-block-start: var(--sp-sm);
+}
+.notice__dismiss {
+    flex: none;
+    align-self: flex-start;
+    margin-inline-start: auto;
+    display: grid;
+    place-items: center;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    color: var(--faint);
+    border-radius: 2px;
+}
+.notice__dismiss:hover {
+    color: var(--fg);
+    background: var(--gray-1);
+}
+.notice__dismiss svg {
+    inline-size: 0.9rem;
+    block-size: 0.9rem;
+    stroke: currentColor;
+}
+
+.notice--info {
+    border-inline-start-color: var(--info);
+}
+.notice--info .notice__icon {
+    color: var(--info);
+}
+.notice--success {
+    border-inline-start-color: var(--ok);
+}
+.notice--success .notice__icon {
+    color: var(--ok);
+}
+.notice--warning {
+    border-inline-start-color: var(--warn);
+}
+.notice--warning .notice__icon {
+    color: var(--warn);
+}
+.notice--danger {
+    border-inline-start-color: var(--bad);
+}
+.notice--danger .notice__icon {
+    color: var(--bad);
+}
+.notice--accent {
+    border-inline-start-color: var(--accent);
+}
+.notice--accent .notice__icon {
+    color: var(--accent-text);
+}
+
+.notice--loud.notice--info {
+    background: var(--info-wash);
+    border-color: var(--info);
+    color: var(--info-text);
+}
+.notice--loud.notice--success {
+    background: var(--ok-wash);
+    border-color: var(--ok);
+    color: var(--ok-text);
+}
+.notice--loud.notice--warning {
+    background: var(--warn-wash);
+    border-color: var(--warn);
+    color: var(--warn-text);
+}
+.notice--loud.notice--danger {
+    background: var(--bad-wash);
+    border-color: var(--bad);
+    color: var(--bad-text);
+}
+.notice--loud .notice__icon {
+    color: currentColor;
+}

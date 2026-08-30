@@ -1,0 +1,79 @@
+.input-group {
+    display: flex;
+    align-items: stretch;
+    inline-size: 100%;
+    max-inline-size: var(--field-max, 24rem);
+}
+.input-group > .field__control,
+.input-group > input,
+.input-group > select {
+    flex: 1;
+    inline-size: auto;
+    min-inline-size: 0;
+    border-radius: 0;
+}
+.input-group > :first-child {
+    border-start-start-radius: var(--radius);
+    border-end-start-radius: var(--radius);
+}
+.input-group > :last-child {
+    border-start-end-radius: var(--radius);
+    border-end-end-radius: var(--radius);
+}
+.input-group > :not(:first-child) {
+    margin-inline-start: calc(var(--border-width) * -1);
+}
+.input-group :focus-visible {
+    z-index: 1;
+}
+
+.input-group__addon {
+    display: flex;
+    align-items: center;
+    padding-inline: var(--sp-sm);
+    color: var(--faint);
+    white-space: nowrap;
+    background: var(--gray-1);
+    border: var(--border-width) solid var(--field-border);
+}
+.input-group__addon svg {
+    inline-size: 1em;
+    block-size: 1em;
+    stroke: currentColor;
+}
+
+.input-affix {
+    position: relative;
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    max-inline-size: var(--field-max, 24rem);
+}
+.input-affix svg,
+.input-affix .icon {
+    position: absolute;
+    inline-size: 1.05rem;
+    block-size: 1.05rem;
+    color: var(--faint);
+    stroke: currentColor;
+    pointer-events: none;
+}
+.input-affix > svg:first-child,
+.input-affix > .icon:first-child {
+    inset-inline-start: var(--sp-sm);
+}
+.input-affix > svg:last-child,
+.input-affix > .icon:last-child {
+    inset-inline-end: var(--sp-sm);
+}
+.input-affix input {
+    inline-size: 100%;
+}
+.input-affix > svg:first-child ~ input,
+.input-affix > .icon:first-child ~ input {
+    padding-inline-start: var(--sp-xl);
+}
+.input-affix:has(> svg:last-child) input,
+.input-affix:has(> .icon:last-child) input {
+    padding-inline-end: var(--sp-xl);
+}

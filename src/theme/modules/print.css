@@ -1,0 +1,84 @@
+@media print {
+    :root {
+        --bg: #fff;
+        --fg: #000;
+        --muted: #333;
+        --faint: #555;
+        --surface: #fff;
+        --surface-sunk: #fff;
+        --border: #999;
+        --border-strong: #666;
+        --accent: #000;
+        --accent-text: #000;
+        --accent-wash: #eee;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+
+    .app-bar,
+    .toaster,
+    .drawer,
+    .drawer__backdrop,
+    .page__backdrop,
+    .page__aside,
+    .side-nav,
+    .tabs,
+    .pager,
+    [data-print="hide"] {
+        display: none !important;
+    }
+
+    .page__main,
+    .page--sidebar .page__main,
+    .page--topnav .page__main {
+        max-inline-size: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        color: #555;
+        word-break: break-all;
+    }
+    a[href^="#"]::after,
+    a[href^="/"]::after {
+        content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        break-after: avoid;
+    }
+    p,
+    blockquote,
+    li {
+        orphans: 3;
+        widows: 3;
+    }
+    pre,
+    blockquote,
+    table,
+    figure,
+    .card,
+    .panel {
+        break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    .card,
+    .panel,
+    .notice,
+    .dialog {
+        border: 1px solid #999 !important;
+        background: #fff !important;
+    }
+}

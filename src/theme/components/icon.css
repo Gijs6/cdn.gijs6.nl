@@ -1,0 +1,60 @@
+.icon {
+    display: inline-block;
+    inline-size: 1.15em;
+    block-size: 1.15em;
+    flex: none;
+    vertical-align: -0.18em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.icon--sm {
+    inline-size: 1em;
+    block-size: 1em;
+}
+.icon--lg {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+}
+.icon--xl {
+    inline-size: 2rem;
+    block-size: 2rem;
+}
+.icon--muted {
+    color: var(--faint);
+}
+.icon--accent {
+    color: var(--accent-text);
+}
+.icon--spin {
+    animation: icon-spin 0.7s linear infinite;
+}
+
+@keyframes icon-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    inline-size: 1.15rem;
+    block-size: 1.15rem;
+    border: 2px solid var(--gray-3);
+    border-block-start-color: var(--accent);
+    border-radius: 999px;
+    vertical-align: -0.2em;
+    animation: icon-spin 0.7s linear infinite;
+}
+.spinner--sm {
+    inline-size: 0.9rem;
+    block-size: 0.9rem;
+    border-width: 2px;
+}
+.spinner--lg {
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    border-width: 3px;
+}

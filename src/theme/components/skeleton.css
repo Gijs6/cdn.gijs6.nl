@@ -1,0 +1,34 @@
+.skeleton {
+    display: block;
+    background: var(--gray-2);
+    border-radius: var(--radius);
+    animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+.skeleton--text {
+    block-size: 0.7em;
+    margin-block: var(--sp-2xs);
+    border-radius: 2px;
+}
+.skeleton--text:last-child {
+    inline-size: 60%;
+}
+.skeleton--line {
+    block-size: 1px;
+}
+.skeleton--circle {
+    border-radius: 999px;
+    aspect-ratio: 1;
+}
+.skeleton--block {
+    block-size: var(--skeleton-h, 6rem);
+}
+
+.skeleton-rows > * + * {
+    margin-block-start: var(--sp-sm);
+}
+
+@keyframes skeleton-pulse {
+    50% {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,39 @@
+.doc {
+    padding-block-end: var(--sp-3xl);
+}
+.doc > section {
+    margin-block-start: var(--sp-2xl);
+}
+.doc > h2,
+.doc > section > h2 {
+    margin-block-start: var(--sp-2xl);
+    padding-block-end: var(--sp-2xs);
+    border-block-end: var(--border-width) solid var(--border);
+}
+.doc > section > h2:first-child {
+    margin-block-start: 0;
+}
+.doc > .page-head + .lead {
+    margin-block-start: 0;
+}
+.doc > h3,
+.doc > section > h3 {
+    margin-block-start: var(--sp-lg);
+}
+.doc pre {
+    margin-block: var(--sp-md);
+}
+
+.tok {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: var(--sp-2xs) var(--sp-md);
+    font-size: var(--t--1);
+    margin-block: var(--sp-sm);
+}
+.tok code:first-child {
+    color: var(--accent-text);
+}
+.tok code {
+    align-self: start;
+}

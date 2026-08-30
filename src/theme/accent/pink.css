@@ -1,0 +1,20 @@
+:root {
+    --accent: #bf2359;
+    --accent-hover: #a01e4b;
+    --accent-text: #a01e4b;
+    --accent-wash: #fbdde9;
+}
+:root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+        --accent: #bf2359;
+        --accent-hover: #f06595;
+        --accent-text: #f98cb5;
+        --accent-wash: #3a1626;
+    }
+}
+:root[data-theme="dark"] {
+    --accent: #bf2359;
+    --accent-hover: #f06595;
+    --accent-text: #f98cb5;
+    --accent-wash: #3a1626;
+}

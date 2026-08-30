@@ -1,0 +1,53 @@
+.segmented {
+    display: inline-flex;
+    padding: var(--sp-3xs);
+    background: var(--gray-2);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+}
+.segmented button,
+.segmented label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    padding: var(--sp-2xs) var(--sp-sm);
+    font-weight: var(--weight-semibold);
+    font-size: var(--t--1);
+    color: var(--muted);
+    background: none;
+    border: var(--border-width) solid transparent;
+    border-radius: calc(var(--radius) - 1px);
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        color var(--transition);
+    white-space: nowrap;
+}
+.segmented button:hover,
+.segmented label:hover {
+    color: var(--fg);
+}
+.segmented button[aria-pressed="true"],
+.segmented button.is-active,
+.segmented input:checked + span,
+.segmented label:has(input:checked) {
+    color: var(--fg);
+    background: var(--bg);
+    border: var(--border-width) solid var(--border-strong);
+}
+.segmented input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.segmented button svg,
+.segmented label svg {
+    inline-size: 1em;
+    block-size: 1em;
+    stroke: currentColor;
+}
+.segmented button:focus-visible,
+.segmented label:has(input:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}

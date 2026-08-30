@@ -1,0 +1,28 @@
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-sm);
+    padding: var(--sp-xs);
+    background: var(--surface-sunk);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+}
+.toolbar--plain {
+    padding: 0;
+    background: none;
+    border: 0;
+}
+.toolbar__group {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+}
+.toolbar__spacer {
+    flex: 1;
+}
+.toolbar__separator {
+    align-self: stretch;
+    inline-size: var(--border-width);
+    background: var(--border);
+}

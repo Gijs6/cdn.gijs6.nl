@@ -1,0 +1,88 @@
+.multi-select {
+    position: relative;
+    inline-size: 100%;
+    max-inline-size: var(--field-max, 24rem);
+}
+.multi-select__control {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2xs);
+    align-items: center;
+    min-block-size: 2.25rem;
+    padding: var(--sp-2xs) var(--sp-xs);
+    background: var(--field-bg);
+    border: var(--border-width) solid var(--field-border);
+    border-radius: var(--radius);
+    cursor: text;
+}
+.multi-select__control:focus-within {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent);
+}
+.multi-select__control input {
+    flex: 1;
+    min-inline-size: 4rem;
+    padding: var(--sp-2xs);
+    border: 0;
+    background: none;
+}
+.multi-select__control input:focus-visible {
+    outline: none;
+}
+
+.multi-select__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-3xs);
+    padding: var(--sp-3xs) var(--sp-3xs) var(--sp-3xs) var(--sp-xs);
+    font-size: var(--t--1);
+    background: var(--gray-1);
+    border-radius: var(--radius);
+}
+.multi-select__chip-remove {
+    display: grid;
+    place-items: center;
+    inline-size: 1.15rem;
+    block-size: 1.15rem;
+    color: var(--faint);
+    border-radius: 2px;
+}
+.multi-select__chip-remove:hover {
+    color: var(--fg);
+    background: var(--gray-3);
+}
+.multi-select__chip-remove svg {
+    inline-size: 0.8rem;
+    block-size: 0.8rem;
+    stroke: currentColor;
+}
+
+.multi-select__menu {
+    position: absolute;
+    inset-block-start: calc(100% + var(--sp-2xs));
+    inset-inline: 0;
+    z-index: var(--z-dialog);
+    max-block-size: 15rem;
+    overflow-y: auto;
+    padding: var(--sp-2xs);
+    background: var(--surface-raised);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius);
+}
+.multi-select__option {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    padding: var(--sp-2xs) var(--sp-xs);
+    border-radius: 2px;
+    cursor: pointer;
+}
+.multi-select__option:hover,
+.multi-select__option.is-active {
+    background: var(--gray-1);
+}
+.multi-select__option[aria-selected="true"] {
+    color: var(--accent-text);
+    font-weight: var(--weight-semibold);
+}

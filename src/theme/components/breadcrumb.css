@@ -1,0 +1,40 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2xs);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--t--1);
+    color: var(--faint);
+}
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2xs);
+    margin: 0;
+}
+.breadcrumb li:not(:last-child)::after {
+    content: "";
+    inline-size: 0.35rem;
+    block-size: 0.35rem;
+    border-inline-end: 1.5px solid var(--gray-5);
+    border-block-start: 1.5px solid var(--gray-5);
+    transform: rotate(45deg);
+}
+.breadcrumb a {
+    color: var(--accent-text);
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb [aria-current] {
+    color: var(--fg);
+}
+.breadcrumb svg {
+    inline-size: 1em;
+    block-size: 1em;
+    stroke: currentColor;
+}
