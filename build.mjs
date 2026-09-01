@@ -86,9 +86,9 @@ function buildFonts() {
   const dest = join(OUT, "fonts");
   mkdirSync(dest, { recursive: true });
   for (const name of readdirSync(FONTS_SRC)) {
-    if (/^(hanken-grotesk|jetbrains-mono)/.test(name)) copyFileSync(join(FONTS_SRC, name), join(dest, name));
+    if (/^(hanken-grotesk|jetbrains-mono|rubik-broken-fax)/.test(name)) copyFileSync(join(FONTS_SRC, name), join(dest, name));
   }
-  console.log("fonts ", "hanken-grotesk + jetbrains-mono");
+  console.log("fonts ", "hanken-grotesk + jetbrains-mono + rubik-broken-fax");
 }
 
 function buildDocs() {

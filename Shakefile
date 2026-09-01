@@ -1,5 +1,23 @@
 #!/bin/bash
 
+setup() {
+  i:npm_install
+}
+
+build() {
+  npm run build
+}
+
+watch() {
+  npm run watch
+}
+
 serve() {
+  build
   server --dir site --port 8005
+}
+
+deploy() {
+  build
+  g:deploy
 }

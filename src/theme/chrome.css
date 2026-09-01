@@ -27,17 +27,15 @@
 .wordmark__mark {
     display: grid;
     place-items: center;
-    inline-size: 1.9rem;
-    block-size: 1.9rem;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
     flex: none;
-    color: var(--accent);
-    background: var(--on-accent);
-    border-radius: 24%;
+    color: var(--on-accent);
 }
 .wordmark__mark svg,
 .wordmark__mark .icon {
-    inline-size: 62%;
-    block-size: 62%;
+    inline-size: 100%;
+    block-size: 100%;
     stroke: currentColor;
 }
 
