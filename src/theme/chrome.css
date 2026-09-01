@@ -53,7 +53,6 @@
     font-weight: var(--weight-semibold);
     text-decoration: none;
     border-radius: var(--radius);
-    transition: background var(--transition);
 }
 .app-bar__nav a:hover {
     background: rgba(0, 0, 0, 0.16);
@@ -191,9 +190,6 @@
     text-align: start;
     text-decoration: none;
     border-radius: var(--radius);
-    transition:
-        background var(--transition),
-        color var(--transition);
 }
 .side-nav a svg,
 .side-nav a .icon,

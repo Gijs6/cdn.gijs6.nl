@@ -52,7 +52,6 @@
 .card--link {
     text-decoration: none;
     color: inherit;
-    transition: border-color var(--transition);
 }
 .card--link:hover {
     border-color: var(--border-strong);

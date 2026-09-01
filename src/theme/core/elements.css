@@ -310,7 +310,6 @@ input[type="reset"] {
     background: var(--gray-1);
     border: var(--border-width) solid var(--border-strong);
     border-radius: var(--radius);
-    transition: background var(--transition);
 }
 button:not([class]):hover,
 input[type="submit"]:hover,

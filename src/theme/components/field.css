@@ -28,7 +28,6 @@
     background: var(--field-bg);
     border: var(--border-width) solid var(--field-border);
     border-radius: var(--radius);
-    transition: border-color var(--transition);
 }
 .field__control:focus-visible {
     outline: 2px solid var(--accent);

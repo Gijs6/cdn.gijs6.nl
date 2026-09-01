@@ -19,13 +19,7 @@
     }
 
     function dismiss(el) {
-        el.classList.add("is-leaving");
-        el.addEventListener("animationend", function () {
-            el.remove();
-        });
-        setTimeout(function () {
-            el.remove();
-        }, 300);
+        el.remove();
     }
 
     function toast(message, opts) {
@@ -34,7 +28,6 @@
         var el = document.createElement("div");
         el.className = "toast toast--" + type;
         el.setAttribute("role", "status");
-        el.setAttribute("data-enter", "");
 
         if (ICONS[type]) {
             var svg = document.createElementNS(

@@ -24,7 +24,6 @@
     inline-size: var(--meter, 0%);
     background: var(--accent);
     border-radius: inherit;
-    transition: inline-size var(--transition);
 }
 .meter--ok .meter__fill {
     background: var(--ok);

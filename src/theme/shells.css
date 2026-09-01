@@ -91,7 +91,6 @@
         inset: var(--bar-h) auto 0 0;
         inline-size: min(18rem, 82vw);
         transform: translateX(-100%);
-        transition: transform var(--transition);
         z-index: var(--z-drawer);
     }
     .page--sidebar.is-drawer.is-open .page__aside {
@@ -103,9 +102,6 @@
         background: var(--backdrop);
         opacity: 0;
         visibility: hidden;
-        transition:
-            opacity var(--transition),
-            visibility var(--transition);
         z-index: var(--z-backdrop);
     }
     .page--sidebar.is-drawer.is-open .page__backdrop {

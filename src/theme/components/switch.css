@@ -21,7 +21,6 @@
     inset: 0;
     background: var(--gray-4);
     border-radius: 999px;
-    transition: background var(--transition);
 }
 .switch__track::after {
     content: "";
@@ -32,7 +31,6 @@
     block-size: calc(var(--switch-h) - 4px);
     background: var(--white);
     border-radius: 999px;
-    transition: transform var(--transition);
 }
 .switch input:checked + .switch__track {
     background: var(--accent);

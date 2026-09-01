@@ -20,9 +20,6 @@
     text-decoration: none;
     border-block-end: 2px solid transparent;
     margin-block-end: -1px;
-    transition:
-        color var(--transition),
-        border-color var(--transition);
 }
 .tabs__tab:hover {
     color: var(--fg);

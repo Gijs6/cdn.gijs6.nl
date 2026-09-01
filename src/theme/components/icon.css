@@ -28,15 +28,6 @@
 .icon--accent {
     color: var(--accent-text);
 }
-.icon--spin {
-    animation: icon-spin 0.7s linear infinite;
-}
-
-@keyframes icon-spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .spinner {
     display: inline-block;
@@ -46,7 +37,6 @@
     border-block-start-color: var(--accent);
     border-radius: 999px;
     vertical-align: -0.2em;
-    animation: icon-spin 0.7s linear infinite;
 }
 .spinner--sm {
     inline-size: 0.9rem;

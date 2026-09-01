@@ -18,9 +18,6 @@
     border: var(--border-width) solid transparent;
     border-radius: calc(var(--radius) - 1px);
     cursor: pointer;
-    transition:
-        background var(--transition),
-        color var(--transition);
     white-space: nowrap;
 }
 .segmented button:hover,

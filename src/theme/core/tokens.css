@@ -85,8 +85,6 @@
     --radius: 4px;
     --border-width: 1px;
 
-    --transition: 120ms ease;
-
     --bar-h: 3.5rem;
     --aside-w: 14rem;
     --content-max: 64rem;
@@ -191,10 +189,4 @@
     --info: #74c0fc;
     --info-wash: #152838;
     --info-text: #a5d8ff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    :root {
-        --transition: 0ms;
-    }
 }

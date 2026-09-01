@@ -11,9 +11,6 @@
     background: var(--surface-sunk);
     border: 2px dashed var(--border-strong);
     border-radius: var(--radius);
-    transition:
-        border-color var(--transition),
-        background var(--transition);
 }
 .file-drop input[type="file"] {
     position: absolute;

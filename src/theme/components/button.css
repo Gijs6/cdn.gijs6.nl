@@ -12,10 +12,6 @@
     background: var(--accent);
     border: var(--border-width) solid transparent;
     border-radius: var(--radius);
-    transition:
-        background var(--transition),
-        border-color var(--transition),
-        color var(--transition);
 }
 .button:hover {
     background: var(--accent-hover);
@@ -130,9 +126,6 @@
     block-size: 2rem;
     color: var(--muted);
     border-radius: var(--radius);
-    transition:
-        background var(--transition),
-        color var(--transition);
 }
 .icon-button:hover {
     color: var(--fg);

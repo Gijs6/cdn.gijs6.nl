@@ -33,7 +33,6 @@
     border-inline-end: 2px solid var(--faint);
     border-block-end: 2px solid var(--faint);
     transform: rotate(45deg);
-    transition: transform var(--transition);
 }
 .accordion__item[open] > summary::after {
     transform: rotate(-135deg);

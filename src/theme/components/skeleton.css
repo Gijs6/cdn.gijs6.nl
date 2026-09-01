@@ -2,7 +2,6 @@
     display: block;
     background: var(--gray-2);
     border-radius: var(--radius);
-    animation: skeleton-pulse 1.4s ease-in-out infinite;
 }
 .skeleton--text {
     block-size: 0.7em;
@@ -25,10 +24,4 @@
 
 .skeleton-rows > * + * {
     margin-block-start: var(--sp-sm);
-}
-
-@keyframes skeleton-pulse {
-    50% {
-        opacity: 0.5;
-    }
 }
