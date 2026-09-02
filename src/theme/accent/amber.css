@@ -1,20 +1,6 @@
 :root {
     --accent: #b35900;
-    --accent-hover: #8f4700;
-    --accent-text: #8f4700;
-    --accent-wash: #fce9d2;
-}
-:root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-        --accent: #b35900;
-        --accent-hover: #ffa94d;
-        --accent-text: #ffc078;
-        --accent-wash: #3a2610;
-    }
-}
-:root[data-theme="dark"] {
-    --accent: #b35900;
-    --accent-hover: #ffa94d;
-    --accent-text: #ffc078;
-    --accent-wash: #3a2610;
+    --accent-hover: light-dark(#8f4700, #ffa94d);
+    --accent-text: light-dark(#8f4700, #ffc078);
+    --accent-wash: light-dark(#fce9d2, #3a2610);
 }

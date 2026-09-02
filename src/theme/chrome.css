@@ -19,7 +19,6 @@
     color: var(--on-accent);
     font-weight: var(--weight-heavy);
     font-size: var(--t-1);
-    letter-spacing: -0.02em;
     text-decoration: none;
     white-space: nowrap;
 }

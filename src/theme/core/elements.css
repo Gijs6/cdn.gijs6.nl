@@ -6,7 +6,6 @@ h5,
 h6 {
     font-weight: var(--weight-bold);
     line-height: var(--leading-tight);
-    letter-spacing: -0.01em;
     margin-block-end: var(--sp-sm);
 }
 h1 {
