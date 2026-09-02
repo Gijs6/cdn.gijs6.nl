@@ -56,6 +56,15 @@
     background: var(--gray-1);
 }
 
+.button--neutral {
+    color: var(--bg);
+    background: var(--fg);
+    border-color: transparent;
+}
+.button--neutral:hover {
+    background: var(--gray-8);
+}
+
 .button--danger {
     background: var(--bad-solid);
 }

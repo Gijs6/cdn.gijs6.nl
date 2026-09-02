@@ -1,10 +1,11 @@
 .callout {
     display: flex;
-    gap: var(--sp-md);
-    padding: var(--sp-md);
-    background: var(--surface-sunk);
-    border: var(--border-width) solid var(--border);
-    border-radius: var(--radius);
+    gap: var(--sp-sm);
+    padding: var(--sp-2xs) 0 var(--sp-2xs) var(--sp-md);
+    background: none;
+    border: 0;
+    border-inline-start: 3px solid var(--border-strong);
+    border-radius: 0;
 }
 .callout__icon {
     flex: none;

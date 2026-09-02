@@ -2,7 +2,7 @@
     inline-size: 100%;
     border-collapse: collapse;
     font-size: var(--t--1);
-    border: var(--border-width) solid var(--border);
+    border: var(--border-width) solid var(--edge);
     border-radius: var(--radius);
     overflow: hidden;
 }

@@ -55,7 +55,8 @@
     gap: var(--sp-2xs);
     padding: var(--sp-3xs) var(--sp-2xs) var(--sp-3xs) var(--sp-xs);
     font-size: var(--t--1);
-    border: var(--border-width) solid var(--border-strong);
+    background: var(--surface-sunk);
+    border: var(--border-width) solid var(--border);
     border-radius: var(--radius);
 }
 .tag--plain {

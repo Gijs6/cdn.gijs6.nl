@@ -10,16 +10,16 @@ h6 {
     margin-block-end: var(--sp-sm);
 }
 h1 {
-    font-size: var(--t-3);
+    font-size: var(--t-4);
 }
 h2 {
-    font-size: var(--t-2);
+    font-size: var(--t-3);
 }
 h3 {
-    font-size: var(--t-1);
+    font-size: var(--t-2);
 }
 h4 {
-    font-size: var(--t-0);
+    font-size: var(--t-1);
 }
 h5,
 h6 {
@@ -197,7 +197,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-size: var(--t--1);
-    border: var(--border-width) solid var(--border);
+    border: var(--border-width) solid var(--edge);
     border-radius: var(--radius);
     overflow: hidden;
 }

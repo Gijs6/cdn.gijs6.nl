@@ -9,6 +9,15 @@
 .stack--center {
     align-items: center;
 }
+.stack--tight {
+    --stack-gap: var(--sp-sm);
+}
+.stack--loose {
+    --stack-gap: var(--sp-xl);
+}
+.stack--sections {
+    --stack-gap: var(--sp-2xl);
+}
 
 .cluster {
     display: flex;

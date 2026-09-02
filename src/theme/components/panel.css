@@ -1,5 +1,5 @@
 .panel {
-    border: var(--border-width) solid var(--border);
+    border: var(--border-width) solid var(--edge);
     border-radius: var(--radius);
     background: var(--surface);
 }

@@ -11,7 +11,7 @@
     color: var(--faint);
 }
 .stat__value {
-    font-size: var(--t-2);
+    font-size: var(--t-3);
     font-weight: var(--weight-bold);
     font-variant-numeric: tabular-nums;
     line-height: 1.1;

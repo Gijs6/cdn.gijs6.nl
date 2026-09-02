@@ -21,9 +21,10 @@
     gap: var(--sp-sm);
     padding: var(--sp-sm) var(--sp-md);
     font-weight: var(--weight-medium);
-    background: var(--surface-raised);
-    border: var(--border-width) solid var(--border-strong);
-    border-inline-start-width: 3px;
+    color: var(--inverse-fg);
+    background: var(--inverse-bg);
+    border: 0;
+    border-inline-start: 3px solid var(--border-strong);
     border-radius: var(--radius);
 }
 .toast__icon {
@@ -43,12 +44,12 @@
     place-items: center;
     inline-size: 1.4rem;
     block-size: 1.4rem;
-    color: var(--faint);
+    color: color-mix(in srgb, var(--inverse-fg) 60%, transparent);
     border-radius: 2px;
 }
 .toast__dismiss:hover {
-    color: var(--fg);
-    background: var(--gray-1);
+    color: var(--inverse-fg);
+    background: color-mix(in srgb, var(--inverse-fg) 15%, transparent);
 }
 .toast__dismiss svg {
     inline-size: 0.85rem;

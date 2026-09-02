@@ -60,6 +60,9 @@
 .card--accent {
     border-inline-start: 3px solid var(--accent);
 }
+.card--prominent {
+    border-color: var(--edge);
+}
 .card--flush {
     border: 0;
     border-radius: 0;
