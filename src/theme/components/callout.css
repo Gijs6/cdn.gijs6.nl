@@ -9,8 +9,8 @@
 }
 .callout__icon {
     flex: none;
-    inline-size: 1.5rem;
-    block-size: 1.5rem;
+    inline-size: var(--icon-lg);
+    block-size: var(--icon-lg);
     color: var(--accent-text);
     stroke: currentColor;
 }

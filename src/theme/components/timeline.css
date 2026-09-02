@@ -27,8 +27,8 @@
     border-radius: 999px;
 }
 .timeline__marker svg {
-    inline-size: 0.8rem;
-    block-size: 0.8rem;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 .timeline__item:not(:last-child) .timeline__marker::after {

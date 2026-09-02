@@ -73,8 +73,8 @@
     color: inherit;
 }
 .table__sort svg {
-    inline-size: 0.9em;
-    block-size: 0.9em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     color: var(--faint);
     stroke: currentColor;
 }

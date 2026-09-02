@@ -1,7 +1,7 @@
 .icon {
     display: inline-block;
-    inline-size: 1.15em;
-    block-size: 1.15em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     flex: none;
     vertical-align: -0.18em;
     fill: none;
@@ -11,16 +11,16 @@
     stroke-linejoin: round;
 }
 .icon--sm {
-    inline-size: 1em;
-    block-size: 1em;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
 }
 .icon--lg {
-    inline-size: 1.5rem;
-    block-size: 1.5rem;
+    inline-size: var(--icon-lg);
+    block-size: var(--icon-lg);
 }
 .icon--xl {
-    inline-size: 2rem;
-    block-size: 2rem;
+    inline-size: var(--icon-xl);
+    block-size: var(--icon-xl);
 }
 .icon--muted {
     color: var(--faint);

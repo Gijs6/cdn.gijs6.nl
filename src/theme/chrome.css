@@ -17,7 +17,7 @@
     align-items: center;
     gap: var(--sp-sm);
     color: var(--on-accent);
-    font-weight: var(--weight-heavy);
+    font-weight: var(--weight-bold);
     font-size: var(--t-1);
     text-decoration: none;
     white-space: nowrap;
@@ -121,8 +121,8 @@
     outline: none;
 }
 .app-bar .search svg {
-    inline-size: 1rem;
-    block-size: 1rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     opacity: 0.8;
     stroke: currentColor;
 }
@@ -193,8 +193,8 @@
 .side-nav a svg,
 .side-nav a .icon,
 .side-nav button svg {
-    inline-size: 1.1rem;
-    block-size: 1.1rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     flex: none;
     stroke: currentColor;
 }

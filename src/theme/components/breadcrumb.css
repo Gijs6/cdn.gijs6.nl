@@ -34,7 +34,7 @@
     color: var(--fg);
 }
 .breadcrumb svg {
-    inline-size: 1em;
-    block-size: 1em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     stroke: currentColor;
 }

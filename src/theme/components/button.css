@@ -23,8 +23,8 @@
 
 .button svg,
 .button .icon {
-    inline-size: 1.05em;
-    block-size: 1.05em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     flex: none;
     stroke: currentColor;
 }
@@ -142,8 +142,8 @@
 }
 .icon-button svg,
 .icon-button .icon {
-    inline-size: 1.15rem;
-    block-size: 1.15rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     stroke: currentColor;
 }
 .icon-button--sm {

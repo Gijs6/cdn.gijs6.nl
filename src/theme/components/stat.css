@@ -30,8 +30,8 @@
     font-weight: var(--weight-semibold);
 }
 .stat__delta svg {
-    inline-size: 0.9em;
-    block-size: 0.9em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     stroke: currentColor;
 }
 .stat__delta--up {

@@ -58,8 +58,8 @@ textarea.field__control {
     color: var(--bad);
 }
 .field__error svg {
-    inline-size: 1em;
-    block-size: 1em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     flex: none;
     stroke: currentColor;
 }

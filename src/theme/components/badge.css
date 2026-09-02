@@ -13,8 +13,8 @@
 }
 .badge svg,
 .badge .icon {
-    inline-size: 0.9em;
-    block-size: 0.9em;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 .badge--ok {
@@ -68,15 +68,15 @@
     inline-size: 1.15rem;
     block-size: 1.15rem;
     color: var(--faint);
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 .tag__remove:hover {
     color: var(--fg);
     background: var(--gray-2);
 }
 .tag__remove svg {
-    inline-size: 0.75rem;
-    block-size: 0.75rem;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 

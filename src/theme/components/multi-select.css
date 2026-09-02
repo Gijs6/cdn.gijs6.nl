@@ -46,15 +46,15 @@
     inline-size: 1.15rem;
     block-size: 1.15rem;
     color: var(--faint);
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 .multi-select__chip-remove:hover {
     color: var(--fg);
     background: var(--gray-3);
 }
 .multi-select__chip-remove svg {
-    inline-size: 0.8rem;
-    block-size: 0.8rem;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 
@@ -75,7 +75,7 @@
     align-items: center;
     gap: var(--sp-sm);
     padding: var(--sp-2xs) var(--sp-xs);
-    border-radius: 2px;
+    border-radius: var(--radius);
     cursor: pointer;
 }
 .multi-select__option:hover,

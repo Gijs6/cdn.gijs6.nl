@@ -25,7 +25,7 @@
     text-decoration: none;
     background: none;
     border: 0;
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 .menu a:hover,
 .menu button:hover,
@@ -35,8 +35,8 @@
 }
 .menu a svg,
 .menu button svg {
-    inline-size: 1.05rem;
-    block-size: 1.05rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     flex: none;
     color: var(--faint);
     stroke: currentColor;

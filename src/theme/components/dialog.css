@@ -48,8 +48,8 @@
     background: var(--gray-1);
 }
 .dialog__close svg {
-    inline-size: 1rem;
-    block-size: 1rem;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 

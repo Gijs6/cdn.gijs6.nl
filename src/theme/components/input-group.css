@@ -37,8 +37,8 @@
     border: var(--border-width) solid var(--field-border);
 }
 .input-group__addon svg {
-    inline-size: 1em;
-    block-size: 1em;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     stroke: currentColor;
 }
 
@@ -52,8 +52,8 @@
 .input-affix svg,
 .input-affix .icon {
     position: absolute;
-    inline-size: 1.05rem;
-    block-size: 1.05rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     color: var(--faint);
     stroke: currentColor;
     pointer-events: none;

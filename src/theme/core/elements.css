@@ -44,11 +44,7 @@ hr {
 
 a {
     color: var(--accent-text);
-    text-decoration-thickness: 1px;
     text-underline-offset: 2px;
-}
-a:hover {
-    text-decoration-thickness: 2px;
 }
 
 strong,
@@ -69,7 +65,7 @@ mark {
     background: var(--accent-wash);
     color: inherit;
     padding: 0 0.15em;
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 
 abbr[title] {

@@ -29,8 +29,8 @@
 }
 .toast__icon {
     flex: none;
-    inline-size: 1.1rem;
-    block-size: 1.1rem;
+    inline-size: var(--icon);
+    block-size: var(--icon);
     margin-block-start: var(--sp-3xs);
     stroke: currentColor;
 }
@@ -45,15 +45,15 @@
     inline-size: 1.4rem;
     block-size: 1.4rem;
     color: color-mix(in srgb, var(--inverse-fg) 60%, transparent);
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 .toast__dismiss:hover {
     color: var(--inverse-fg);
     background: color-mix(in srgb, var(--inverse-fg) 15%, transparent);
 }
 .toast__dismiss svg {
-    inline-size: 0.85rem;
-    block-size: 0.85rem;
+    inline-size: var(--icon-sm);
+    block-size: var(--icon-sm);
     stroke: currentColor;
 }
 

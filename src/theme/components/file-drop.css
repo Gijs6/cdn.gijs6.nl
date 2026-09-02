@@ -26,8 +26,8 @@
     background: var(--accent-wash);
 }
 .file-drop__icon {
-    inline-size: 1.75rem;
-    block-size: 1.75rem;
+    inline-size: var(--icon-lg);
+    block-size: var(--icon-lg);
     color: var(--faint);
     stroke: currentColor;
 }

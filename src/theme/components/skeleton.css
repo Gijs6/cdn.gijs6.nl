@@ -6,7 +6,7 @@
 .skeleton--text {
     block-size: 0.7em;
     margin-block: var(--sp-2xs);
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 .skeleton--text:last-child {
     inline-size: 60%;
