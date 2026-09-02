@@ -15,17 +15,17 @@
     --gray-8: light-dark(#35312a, #d3d1cb);
     --gray-9: light-dark(#221f19, #e9e8e2);
 
-    --bg: light-dark(#f7f5f0, #171716);
+    --bg: light-dark(#f4f1ea, #151513);
     --fg: var(--gray-9);
     --muted: var(--gray-7);
     --faint: light-dark(#6b6456, #93928b);
-    --surface: light-dark(#fffdf9, #1e1e1c);
-    --surface-sunk: light-dark(#edeae2, #1a1a18);
-    --surface-raised: light-dark(#fffdf9, #262624);
+    --surface: light-dark(#ffffff, #1e1e1c);
+    --surface-sunk: light-dark(#ebe7de, #1a1a18);
+    --surface-raised: light-dark(#ffffff, #262624);
     --border: light-dark(#dbd5ca, #3a3a37);
     --border-strong: var(--gray-6);
     --edge: var(--gray-4);
-    --field-bg: light-dark(#fffdf9, #1a1a18);
+    --field-bg: light-dark(#ffffff, #1a1a18);
     --field-border: var(--gray-6);
     --backdrop: light-dark(rgba(28, 24, 16, 0.45), rgba(0, 0, 0, 0.6));
     --selection: color-mix(in srgb, var(--accent) 22%, transparent);
@@ -55,12 +55,12 @@
     --sp-3xs: 0.125rem;
     --sp-2xs: 0.25rem;
     --sp-xs: 0.375rem;
-    --sp-sm: 0.625rem;
-    --sp-md: 1rem;
-    --sp-lg: 1.25rem;
-    --sp-xl: 2rem;
-    --sp-2xl: 3rem;
-    --sp-3xl: 4rem;
+    --sp-sm: 0.5rem;
+    --sp-md: 0.875rem;
+    --sp-lg: 1.125rem;
+    --sp-xl: 1.75rem;
+    --sp-2xl: 2.5rem;
+    --sp-3xl: 3.5rem;
 
     --font-sans:
         "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto,

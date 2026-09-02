@@ -5,11 +5,10 @@
     gap: var(--sp-2xs);
     padding: var(--sp-2xl) var(--sp-md);
     text-align: center;
+}
+.empty--framed {
     border: var(--border-width) dashed var(--border-strong);
     border-radius: var(--radius);
-}
-.empty--plain {
-    border: 0;
 }
 .empty__icon {
     inline-size: var(--icon-xl);

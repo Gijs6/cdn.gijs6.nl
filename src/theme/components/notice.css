@@ -2,10 +2,9 @@
     display: flex;
     gap: var(--sp-sm);
     padding: var(--sp-sm) var(--sp-md);
-    background: var(--surface);
-    border: var(--border-width) solid var(--border);
-    border-inline-start-width: 3px;
-    border-radius: var(--radius);
+    background: var(--surface-sunk);
+    border-inline-start: 3px solid var(--border-strong);
+    border-radius: 0 var(--radius) var(--radius) 0;
 }
 .notice__icon {
     flex: none;

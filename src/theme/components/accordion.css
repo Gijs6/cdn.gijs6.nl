@@ -1,6 +1,5 @@
 .accordion {
-    border: var(--border-width) solid var(--border);
-    border-radius: var(--radius);
+    border-block: var(--border-width) solid var(--border);
 }
 .accordion__item + .accordion__item {
     border-block-start: var(--border-width) solid var(--border);

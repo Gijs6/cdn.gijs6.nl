@@ -2,33 +2,23 @@
     inline-size: 100%;
     border-collapse: collapse;
     font-size: var(--t--1);
-    border: var(--border-width) solid var(--edge);
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-.table thead {
-    background: var(--gray-1);
 }
 .table th {
     text-align: start;
     font-weight: var(--weight-bold);
     white-space: nowrap;
+    border-block-end: var(--border-width) solid var(--border-strong);
 }
 .table th,
 .table td {
     padding: var(--sp-xs) var(--sp-sm);
-    border-block-end: var(--border-width) solid var(--border);
     vertical-align: top;
 }
-.table th:not(:last-child),
-.table td:not(:last-child) {
-    border-inline-end: var(--border-width) solid var(--border);
+.table td {
+    border-block-end: var(--border-width) solid var(--border);
 }
 .table tbody tr:last-child td {
     border-block-end: 0;
-}
-.table tbody tr:nth-child(even) {
-    background: var(--surface-sunk);
 }
 .table td--num,
 .table th--num {

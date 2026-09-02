@@ -147,7 +147,6 @@ pre {
     line-height: 1.5;
     padding: var(--sp-md);
     background: var(--surface-sunk);
-    border: var(--border-width) solid var(--border);
     border-radius: var(--radius);
     overflow-x: auto;
     scrollbar-width: thin;
@@ -192,9 +191,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-size: var(--t--1);
-    border: var(--border-width) solid var(--edge);
-    border-radius: var(--radius);
-    overflow: hidden;
 }
 caption {
     text-align: start;
@@ -203,27 +199,20 @@ caption {
     margin-block-end: var(--sp-2xs);
     caption-side: top;
 }
-thead {
-    background: var(--gray-1);
-}
 th {
     text-align: start;
     font-weight: var(--weight-bold);
+    border-block-end: var(--border-width) solid var(--border-strong);
 }
 th,
 td {
     padding: var(--sp-xs) var(--sp-sm);
-    border-block-end: var(--border-width) solid var(--border);
 }
-th:not(:last-child),
-td:not(:last-child) {
-    border-inline-end: var(--border-width) solid var(--border);
+td {
+    border-block-end: var(--border-width) solid var(--border);
 }
 tbody tr:last-child td {
     border-block-end: 0;
-}
-tbody tr:nth-child(even) {
-    background: var(--surface-sunk);
 }
 
 label {
@@ -341,9 +330,8 @@ progress::-moz-progress-bar {
 }
 
 details {
-    padding: var(--sp-sm) var(--sp-md);
-    border: var(--border-width) solid var(--border);
-    border-radius: var(--radius);
+    padding: var(--sp-sm) 0;
+    border-block-end: var(--border-width) solid var(--border);
 }
 summary {
     font-weight: var(--weight-semibold);
