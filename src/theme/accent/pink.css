@@ -1,6 +1,6 @@
 :root {
-    --accent: #bf2359;
-    --accent-hover: light-dark(#a01e4b, #f06595);
-    --accent-text: light-dark(#a01e4b, #f98cb5);
-    --accent-wash: light-dark(#fbdde9, #3a1626);
+    --accent: #b02a78;
+    --accent-hover: light-dark(#92215f, #f472b6);
+    --accent-text: light-dark(#92215f, #f9a8d4);
+    --accent-wash: light-dark(#fae0ef, #3a1730);
 }
