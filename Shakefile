@@ -14,7 +14,7 @@ watch() {
 
 serve() {
   build
-  server --dir site --port 8005
+  i:serve_static site
 }
 
 deploy() {
