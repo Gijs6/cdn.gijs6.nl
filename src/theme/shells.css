@@ -25,7 +25,7 @@
 .page--sidebar .page__aside {
     position: sticky;
     inset-block-start: var(--bar-h);
-    block-size: calc(100svh - var(--bar-h));
+    max-block-size: calc(100svh - var(--bar-h));
     padding: var(--sp-md);
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -48,7 +48,8 @@
     }
     .page--sidebar:not(.is-bottombar):not(.is-drawer) .page__aside {
         position: static;
-        block-size: auto;
+        max-block-size: none;
+        overflow: visible;
         border-inline-end: 0;
         border-block-end: var(--border-width) solid var(--border);
     }
