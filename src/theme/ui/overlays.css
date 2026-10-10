@@ -1,0 +1,158 @@
+.toaster {
+    position: fixed;
+    inset-block-end: var(--space-xl);
+    inset-inline-end: var(--space-xl);
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    inline-size: min(26rem, calc(100vw - 2 * var(--space-xl)));
+}
+
+.toast {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-lg) var(--space-xl);
+    color: var(--alert-info-fg);
+    background: var(--alert-info-bg);
+    border: 1px solid var(--alert-info-line);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px var(--shadow);
+}
+.toast--success {
+    color: var(--alert-success-fg);
+    background: var(--alert-success-bg);
+    border-color: var(--alert-success-line);
+}
+.toast--warning {
+    color: var(--alert-warning-fg);
+    background: var(--alert-warning-bg);
+    border-color: var(--alert-warning-line);
+}
+.toast--danger {
+    color: var(--alert-danger-fg);
+    background: var(--alert-danger-bg);
+    border-color: var(--alert-danger-line);
+}
+
+.toast__body {
+    flex: 1;
+}
+
+.toast__dismiss {
+    padding: 0;
+    color: inherit;
+    background: none;
+    border: 0;
+    opacity: 0.6;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.tooltip {
+    position: relative;
+
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        inset-block-end: calc(100% + var(--space-xs));
+        inset-inline-start: 50%;
+        z-index: 80;
+        padding: var(--space-2xs) var(--space-sm);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #ffffff;
+        white-space: nowrap;
+        background: #000000;
+        border-radius: var(--radius);
+        opacity: 0.9;
+        pointer-events: none;
+        translate: -50% 0;
+        display: none;
+    }
+    &:hover::after,
+    &:focus-visible::after {
+        display: block;
+    }
+}
+
+.menu-anchor {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-end: 0;
+    z-index: 50;
+    min-inline-size: 160px;
+    margin: var(--space-3xs) 0 0;
+    padding: var(--space-xs) 0;
+    list-style: none;
+    background: var(--page);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 12px var(--shadow);
+
+    a,
+    button {
+        display: block;
+        inline-size: 100%;
+        padding: var(--space-2xs) var(--space-2xl);
+        color: var(--fg);
+        text-align: start;
+        text-decoration: none;
+        white-space: nowrap;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+    a:hover,
+    button:hover {
+        background: var(--head);
+    }
+}
+
+.dialog {
+    inline-size: min(600px, calc(100% - 2 * var(--space-xl)));
+    padding: 0;
+    color: var(--fg);
+    background: var(--page);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.dialog__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xl);
+    border-bottom: 1px solid var(--line);
+
+    h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+.dialog__body {
+    padding: var(--space-xl);
+}
+
+.dialog__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-xs);
+    padding: var(--space-xl);
+    border-top: 1px solid var(--line);
+}
