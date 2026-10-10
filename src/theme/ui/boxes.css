@@ -189,3 +189,37 @@
     font-size: 14px;
     color: var(--muted);
 }
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 var(--space-xl);
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--rule);
+}
+
+.tabs__tab {
+    display: inline-block;
+    margin-block-end: -1px;
+    padding: var(--space-sm) var(--space-lg);
+    font: inherit;
+    color: var(--link);
+    text-decoration: underline;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+        color: color-mix(in srgb, var(--link) 70%, var(--fg));
+        background: var(--head);
+    }
+    &.is-active,
+    &[aria-current] {
+        font-weight: 700;
+        color: var(--fg);
+        text-decoration: none;
+        background: var(--page);
+        border-color: var(--rule) var(--rule) var(--page);
+    }
+}
