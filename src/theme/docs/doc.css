@@ -1,7 +1,7 @@
 .doc h2 {
     margin-block-start: var(--space-3xl);
     padding-block-end: var(--space-xs);
-    border-bottom: 1px solid var(--h1-line);
+    border-bottom: 1px solid var(--line);
 }
 
 .doc__row {
