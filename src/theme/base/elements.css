@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--fg);
+    background: var(--bg);
+}
+
+:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: var(--space-2xl) 0 var(--space-md);
+    font-weight: 500;
+    line-height: 1.1;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+}
+
+p,
+ul,
+ol,
+dl,
+pre,
+blockquote {
+    margin: 0 0 var(--space-md);
+}
+
+small {
+    font-size: 85%;
+}
+
+hr {
+    margin: var(--space-2xl) 0;
+    border: 0;
+    border-top: 1px solid var(--h1-line);
+}
+
+img,
+svg {
+    max-inline-size: 100%;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--mono);
+}
+code {
+    padding: var(--space-3xs) var(--space-2xs);
+    font-size: 90%;
+    color: var(--code-fg);
+    background: var(--code-bg);
+    border-radius: var(--radius);
+}
+pre {
+    padding: var(--space-md);
+    overflow: auto;
+    font-size: 13px;
+    color: var(--fg);
+    background: var(--pre-bg);
+    border: 1px solid var(--pre-line);
+    border-radius: var(--radius);
+}
+pre code {
+    padding: 0;
+    color: inherit;
+    background: none;
+}
+
+table {
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="submit"], [type="button"]),
+select,
+textarea {
+    inline-size: 100%;
+    padding: var(--space-xs) var(--space-lg);
+    color: var(--input-fg);
+    background: var(--input-bg);
+    border: 1px solid var(--input-line);
+    border-radius: var(--radius);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+:is(input, select, textarea):focus-visible {
+    outline: 0;
+    border-color: var(--link);
+    box-shadow:
+        inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px color-mix(in srgb, var(--link) 60%, transparent);
+}
+textarea {
+    min-block-size: 6rem;
+    resize: vertical;
+}
+
+details > summary {
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.muted {
+    color: var(--muted);
+}
