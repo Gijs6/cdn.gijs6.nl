@@ -6,7 +6,7 @@ import { dirname, join, relative, extname, basename } from "node:path";
 
 const ROOT = dirname(new URL(import.meta.url).pathname);
 const SRC = join(ROOT, "src/theme");
-const OUT = join(ROOT, "site/theme/v1");
+const OUT = join(ROOT, "site/theme/v2");
 const FONTS_SRC = join(ROOT, "site/fonts");
 const LCSS = join(ROOT, "node_modules/.bin/lightningcss");
 const ESBUILD = join(ROOT, "node_modules/.bin/esbuild");
