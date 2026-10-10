@@ -11,7 +11,6 @@
     --head: light-dark(#e8e8e8, #3a3a3a);
     --head-soft: light-dark(#f4f4f4, #2e2e2e);
     --link: light-dark(#3b5bdb, #9bafff);
-    --shadow: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
 
     --input-bg: light-dark(#ffffff, #303030);
     --input-fg: light-dark(#555555, #ffffff);

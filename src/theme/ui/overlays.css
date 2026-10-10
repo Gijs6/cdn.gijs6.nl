@@ -17,7 +17,6 @@
     color: var(--alert-info-fg);
     background: var(--alert-info-bg);
     border: 1px solid var(--alert-info-line);
-    box-shadow: 0 2px 6px var(--shadow);
 }
 .toast--success {
     color: var(--alert-success-fg);
@@ -94,7 +93,6 @@
     list-style: none;
     background: var(--page);
     border: 1px solid var(--rule);
-    box-shadow: 0 2px 6px var(--shadow);
 
     a,
     button {
@@ -121,7 +119,6 @@
     color: var(--fg);
     background: var(--page);
     border: 1px solid var(--rule);
-    box-shadow: 0 2px 6px var(--shadow);
 
     &::backdrop {
         background: rgba(0, 0, 0, 0.5);
