@@ -1,39 +1,21 @@
-.doc {
-    padding-block-end: var(--sp-3xl);
-}
-.doc > section {
-    margin-block-start: var(--sp-2xl);
-}
-.doc > h2,
-.doc > section > h2 {
-    margin-block-start: var(--sp-2xl);
-    padding-block-end: var(--sp-2xs);
-    border-block-end: var(--border-width) solid var(--border);
-}
-.doc > section > h2:first-child {
-    margin-block-start: 0;
-}
-.doc > .page-head + .lead {
-    margin-block-start: 0;
-}
-.doc > h3,
-.doc > section > h3 {
-    margin-block-start: var(--sp-lg);
-}
-.doc pre {
-    margin-block: var(--sp-md);
+.doc h2 {
+    margin-block-start: var(--space-3xl);
+    padding-block-end: var(--space-xs);
+    border-bottom: 1px solid var(--h1-line);
 }
 
-.tok {
-    display: grid;
-    grid-template-columns: 11rem 1fr;
-    gap: var(--sp-2xs) var(--sp-md);
-    font-size: var(--t--1);
-    margin-block: var(--sp-sm);
+.doc__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-block-end: var(--space-xl);
 }
-.tok code:first-child {
-    color: var(--accent-text);
-}
-.tok code {
-    align-self: start;
+
+.doc__swatch {
+    display: inline-block;
+    inline-size: var(--space-2xl);
+    block-size: var(--space-2xl);
+    vertical-align: middle;
+    border: 1px solid var(--line);
 }
