@@ -94,3 +94,15 @@
     flex-wrap: wrap;
     gap: var(--space-xs);
 }
+
+.input-row {
+    display: flex;
+    gap: var(--space-xs);
+    max-inline-size: 40em;
+    margin-block-end: var(--space-2xl);
+
+    input {
+        flex: 1;
+        min-inline-size: 0;
+    }
+}
