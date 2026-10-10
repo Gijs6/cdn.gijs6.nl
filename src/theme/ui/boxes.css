@@ -1,18 +1,9 @@
 .panel {
     margin-block-end: var(--space-2xl);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
 
     .table,
     & > .list {
-        margin: 0;
-        border: 0;
-    }
-    .table :is(th, td):first-child {
-        padding-inline-start: var(--space-xl);
-    }
-    .table :is(th, td):last-child {
-        padding-inline-end: var(--space-xl);
+        margin-block: 0;
     }
 }
 
@@ -22,18 +13,22 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--space-xs) var(--space-lg);
-    margin: 0;
-    padding: var(--space-md) var(--space-xl);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.43;
-    background: var(--head);
-    border-bottom: 1px solid var(--line);
-    border-radius: var(--radius) var(--radius) 0 0;
+    margin: 0 0 var(--space-sm);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
 }
 
 .panel__body {
-    padding: var(--space-xl);
+    & > :last-child {
+        margin-block-end: 0;
+    }
+}
+
+.table-wrap,
+.list,
+.empty {
+    margin-inline: calc(-1 * var(--space-sm));
 }
 
 .table-wrap {
@@ -41,39 +36,62 @@
     overflow-x: auto;
 }
 
-.table {
+:not(.table-wrap) > .table {
+    inline-size: calc(100% + 2 * var(--space-sm));
+    margin-inline: calc(-1 * var(--space-sm));
+}
+
+.table-wrap > .table {
     inline-size: 100%;
+}
+
+.table {
     margin-block-end: var(--space-2xl);
+    border-block: 1px solid var(--rule);
 
     th,
     td {
-        padding: var(--space-sm);
+        padding: var(--space-xs) var(--space-sm);
         text-align: start;
         vertical-align: top;
-    }
-    th {
-        border-bottom: 2px solid var(--line);
-    }
-    tbody tr {
         border-top: 1px solid var(--line);
     }
-    thead + tbody tr:first-child {
-        border-top: 0;
+    thead th {
+        background: var(--head);
+        border-bottom: 1px solid var(--rule);
     }
+}
+
+.table--kv tbody th {
+    inline-size: 1%;
+    white-space: nowrap;
+    background: var(--head-soft);
 }
 
 .table .table__num {
     text-align: end;
 }
 
+.table .table__actions {
+    inline-size: 1%;
+    padding-block: var(--space-2xs);
+    text-align: end;
+    white-space: nowrap;
+
+    form {
+        display: inline;
+    }
+}
+
 .list {
-    margin: 0 0 var(--space-2xl);
+    margin-block: 0 var(--space-2xl);
     padding: 0;
     list-style: none;
+    border-block: 1px solid var(--rule);
 }
 
 .list__item {
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-xs) var(--space-sm);
     border-top: 1px solid var(--line);
 
     &:first-child {
@@ -86,11 +104,10 @@
 
 .alert {
     margin: 0 0 var(--space-2xl);
-    padding: var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
     color: var(--alert-info-fg);
     background: var(--alert-info-bg);
     border: 1px solid var(--alert-info-line);
-    border-radius: var(--radius);
 
     a {
         font-weight: 700;
@@ -136,21 +153,21 @@
 .count {
     display: inline-block;
     min-inline-size: 10px;
-    padding: var(--space-2xs) var(--space-xs);
+    padding: var(--space-3xs) var(--space-xs);
     font-size: 12px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.45;
     color: #ffffff;
     text-align: center;
-    background: #777777;
-    border-radius: 10px;
+    background: var(--muted);
 }
 .count--bad {
     background: var(--danger);
 }
 
 .empty {
-    padding: var(--space-3xl) var(--space-xl);
+    padding: var(--space-2xl) var(--space-xl);
+    border-block: 1px solid var(--rule);
     color: var(--muted);
     text-align: center;
 
@@ -160,12 +177,12 @@
 }
 
 .empty__title {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 700;
     color: var(--fg);
 }
 
 .lead {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--muted);
 }
