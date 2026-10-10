@@ -74,9 +74,12 @@
 
 .table .table__actions {
     inline-size: 1%;
-    padding-block: var(--space-2xs);
     text-align: end;
     white-space: nowrap;
+
+    .btn--sm {
+        margin-block: calc(-1 * var(--space-3xs));
+    }
 
     form {
         display: inline;
