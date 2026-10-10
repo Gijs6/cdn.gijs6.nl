@@ -117,7 +117,14 @@ button {
     font: inherit;
 }
 
-input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="submit"], [type="button"]),
+input:not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"],
+    [type="submit"],
+    [type="button"]
+),
 select,
 textarea {
     inline-size: 100%;
