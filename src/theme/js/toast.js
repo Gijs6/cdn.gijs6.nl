@@ -38,7 +38,7 @@
 
         tray().appendChild(el);
 
-        var timeout = opts.timeout == null ? 5000 : opts.timeout;
+        var timeout = opts.timeout == null ? 6000 : opts.timeout;
         if (timeout)
             setTimeout(function () {
                 dismiss(el);
@@ -52,7 +52,7 @@
     document
         .querySelectorAll(".toast[data-auto-dismiss]")
         .forEach(function (el) {
-            var ms = parseInt(el.getAttribute("data-auto-dismiss"), 10) || 5000;
+            var ms = parseInt(el.getAttribute("data-auto-dismiss"), 10) || 6000;
             setTimeout(function () {
                 dismiss(el);
             }, ms);
