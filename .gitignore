@@ -1,6 +1,4 @@
 node_modules
 dump
+src/theme/docs
 site/theme
-index.html
-kitchen.html
-icons/README.md

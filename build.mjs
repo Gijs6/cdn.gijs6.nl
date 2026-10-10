@@ -23,9 +23,10 @@ const walk = (dir, pred = () => true, acc = []) => {
 const ensure = (p) => mkdirSync(dirname(p), { recursive: true });
 
 function buildCss() {
-  const entries = walk(SRC, (p) => extname(p) === ".css").filter(
-    (p) => !relative(SRC, p).startsWith(`core${"/"}`) || basename(p) === "core.css",
-  );
+  const entries = walk(SRC, (p) => extname(p) === ".css").filter((p) => {
+    const rel = relative(SRC, p);
+    return rel === "all.css" || rel.startsWith(`accent${"/"}`);
+  });
   for (const entry of entries) {
     const rel = relative(SRC, entry);
     const dest = join(OUT, rel);
@@ -48,38 +49,6 @@ function buildJs() {
     });
     console.log("js    ", rel);
   }
-}
-
-function buildIcons() {
-  const dir = join(SRC, "icons");
-  if (!existsSync(dir)) return;
-  const svgs = readdirSync(dir).filter((n) => extname(n) === ".svg");
-  const symbols = [];
-  for (const name of svgs) {
-    const id = basename(name, ".svg");
-    const dest = join(OUT, "icons", name);
-    ensure(dest);
-    copyFileSync(join(dir, name), dest);
-    const body = readFileSync(join(dir, name), "utf8")
-      .replace(/<\?xml[^>]*\?>/g, "")
-      .replace(/<!--[\s\S]*?-->/g, "")
-      .replace(/<svg[^>]*>/, "")
-      .replace(/<\/svg>/, "")
-      .trim();
-    symbols.push(
-      `<symbol id="${id}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${body}</symbol>`,
-    );
-  }
-  const sprite =
-    `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">\n` +
-    symbols.join("\n") +
-    `\n</svg>\n`;
-  ensure(join(OUT, "icons/sprite.svg"));
-  writeFileSync(join(OUT, "icons/sprite.svg"), sprite);
-  for (const extra of ["manifest.json", "README.md"]) {
-    if (existsSync(join(dir, extra))) copyFileSync(join(dir, extra), join(OUT, "icons", extra));
-  }
-  console.log("icons ", svgs.length, "+ sprite.svg");
 }
 
 function buildFonts() {
@@ -107,7 +76,6 @@ function build() {
   rmSync(OUT, { recursive: true, force: true });
   mkdirSync(OUT, { recursive: true });
   buildFonts();
-  buildIcons();
   buildCss();
   buildJs();
   buildDocs();
