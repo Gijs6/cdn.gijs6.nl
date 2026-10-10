@@ -55,9 +55,9 @@ function buildFonts() {
   const dest = join(OUT, "fonts");
   mkdirSync(dest, { recursive: true });
   for (const name of readdirSync(FONTS_SRC)) {
-    if (/^(ibm-plex-sans|ibm-plex-mono)/.test(name)) copyFileSync(join(FONTS_SRC, name), join(dest, name));
+    if (/^(pt-sans|ibm-plex-mono)/.test(name)) copyFileSync(join(FONTS_SRC, name), join(dest, name));
   }
-  console.log("fonts ", "ibm-plex-sans + ibm-plex-mono");
+  console.log("fonts ", "pt-sans + ibm-plex-mono");
 }
 
 function buildDocs() {
