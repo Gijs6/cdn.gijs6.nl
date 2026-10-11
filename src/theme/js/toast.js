@@ -1,4 +1,6 @@
 (function () {
+    var TYPES = { success: "success", warning: "warning", error: "danger", danger: "danger" };
+
     function tray() {
         var t = document.querySelector(".toaster");
         if (!t) {
@@ -10,15 +12,17 @@
         return t;
     }
 
-    function dismiss(el) {
-        el.remove();
+    function autoDismiss(el, ms) {
+        if (ms)
+            setTimeout(function () {
+                el.remove();
+            }, ms);
     }
 
     function toast(message, opts) {
         opts = opts || {};
-        var type = opts.type || "info";
         var el = document.createElement("div");
-        el.className = "toast toast--" + type;
+        el.className = "toast toast--" + (TYPES[opts.type] || "info");
         el.setAttribute("role", "status");
 
         var body = document.createElement("div");
@@ -30,36 +34,45 @@
         close.type = "button";
         close.className = "toast__dismiss";
         close.setAttribute("aria-label", "Dismiss");
-        close.textContent = "\u00d7";
-        close.addEventListener("click", function () {
-            dismiss(el);
-        });
+        close.textContent = "×";
         el.appendChild(close);
 
         tray().appendChild(el);
-
-        var timeout = opts.timeout == null ? 6000 : opts.timeout;
-        if (timeout)
-            setTimeout(function () {
-                dismiss(el);
-            }, timeout);
-
+        autoDismiss(el, opts.timeout == null ? 6000 : opts.timeout);
         return el;
+    }
+
+    function wire() {
+        document.querySelectorAll(".toast[data-auto-dismiss]:not([data-wired])").forEach(function (el) {
+            el.setAttribute("data-wired", "");
+            autoDismiss(el, parseInt(el.getAttribute("data-auto-dismiss"), 10) || 6000);
+        });
     }
 
     window.toast = toast;
 
-    document
-        .querySelectorAll(".toast[data-auto-dismiss]")
-        .forEach(function (el) {
-            var ms = parseInt(el.getAttribute("data-auto-dismiss"), 10) || 6000;
-            setTimeout(function () {
-                dismiss(el);
-            }, ms);
-            var b = el.querySelector(".toast__dismiss");
-            if (b)
-                b.addEventListener("click", function () {
-                    dismiss(el);
-                });
+    document.addEventListener("click", function (e) {
+        var button = e.target.closest && e.target.closest(".toast__dismiss");
+        if (button) button.closest(".toast").remove();
+    });
+
+    document.addEventListener("toast", function (e) {
+        (e.detail.messages || []).forEach(function (m) {
+            toast(m.text, { type: m.type });
         });
+    });
+
+    function failed(message) {
+        return function (e) {
+            var target = e.detail.target || e.detail.elt;
+            if (target && target.closest && target.closest("[data-error-inline]")) return;
+            toast(message, { type: "danger" });
+        };
+    }
+
+    document.addEventListener("htmx:responseError", failed("Something went wrong on our end. Try again later."));
+    document.addEventListener("htmx:sendError", failed("Couldn't reach the server. Check your connection and try again."));
+
+    document.addEventListener("htmx:afterSettle", wire);
+    wire();
 })();

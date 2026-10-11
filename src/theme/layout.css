@@ -204,6 +204,10 @@
     vertical-align: top;
 }
 
+.footer__version {
+    font-family: var(--mono);
+}
+
 .error {
     text-align: center;
 }
