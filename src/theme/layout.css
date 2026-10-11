@@ -173,6 +173,7 @@
 }
 
 .footer {
+    margin-block-start: auto;
     background: var(--foot-bg);
     border-top: 1px solid var(--foot-line);
 
