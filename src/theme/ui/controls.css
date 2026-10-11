@@ -108,9 +108,22 @@
     }
 }
 
+.btn:active {
+    background: color-mix(in srgb, var(--btn-hover) 80%, var(--fg));
+}
+
 .btn:is([aria-pressed="true"], [aria-current]) {
+    position: relative;
+    z-index: 1;
     font-weight: 700;
-    background: color-mix(in srgb, var(--btn-hover) 88%, var(--fg));
+    color: var(--on-nav);
+    background: var(--nav-bg);
+    border-color: var(--nav-line);
+
+    &:hover {
+        color: var(--on-nav);
+        background: color-mix(in srgb, var(--nav-bg) 85%, black);
+    }
 }
 
 .input-row {

@@ -153,6 +153,10 @@
 
 .dialog__body {
     padding: var(--space-xl);
+
+    & > :last-child {
+        margin-block-end: 0;
+    }
 }
 
 .dialog__actions {
