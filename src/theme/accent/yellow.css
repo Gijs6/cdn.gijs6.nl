@@ -1,0 +1,8 @@
+:root {
+    --link: var(--yellow-text);
+    --nav-bg: var(--yellow-solid);
+    --nav-line: var(--yellow-solid-line);
+    --on-nav: var(--yellow-on-solid);
+    --foot-bg: var(--yellow-tint);
+    --foot-line: var(--yellow-tint-line);
+}

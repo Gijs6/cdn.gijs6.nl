@@ -4,15 +4,39 @@ import { dirname, join } from "node:path";
 const ROOT = dirname(new URL(import.meta.url).pathname);
 const OUT = join(ROOT, "src/theme/base/palette.css");
 
-const HUES = { red: 25, orange: 50, lime: 120, green: 148, teal: 178, cyan: 218, indigo: 265, purple: 300, pink: 345 };
+const HUES = {
+  red: [22, 24],
+  orange: [58, 52],
+  yellow: [94, 80, 1.4],
+  lime: [128, 136],
+  green: [156, 154],
+  teal: [186, 186],
+  cyan: [224, 226],
+  indigo: [266, 266],
+  purple: [302, 302],
+  pink: [352, 350],
+};
 
 const STEPS = {
-  text: [[0.52, 0.15], [0.8, 0.12]],
-  solid: [[0.545, 0.18], [0.48, 0.16]],
-  "solid-line": [[0.46, 0.16], [0.41, 0.14]],
-  tint: [[0.955, 0.03], [0.26, 0.05]],
-  "tint-line": [[0.86, 0.09], [0.4, 0.09]],
-  "tint-text": [[0.42, 0.11], [0.86, 0.08]],
+  text: [[0.52, 0.18, true], [0.8, 0.13]],
+  solid: [[0.545, 0.19, true], [0.52, 0.18, true]],
+  "solid-line": [[0.46, 0.17, true], [0.44, 0.16, true]],
+  tint: [[0.96, 0.03], [0.28, 0.065, true]],
+  "tint-line": [[0.87, 0.09], [0.45, 0.11, true]],
+  "tint-text": [[0.42, 0.13, true], [0.87, 0.1]],
+};
+
+const LIGHT_SOLIDS = {
+  orange: {
+    solid: [[0.73, 0.19], [0.7, 0.18]],
+    "solid-line": [[0.67, 0.19], [0.65, 0.18]],
+    "on-solid": [[0.24, 0.05], [0.24, 0.05]],
+  },
+  yellow: {
+    solid: [[0.87, 0.18], [0.84, 0.17]],
+    "solid-line": [[0.8, 0.17], [0.77, 0.16]],
+    "on-solid": [[0.27, 0.05], [0.27, 0.05]],
+  },
 };
 
 const GREY_HUE = 265;
@@ -82,7 +106,12 @@ const greys = Object.fromEntries(
 const ramps = Object.fromEntries(
   Object.entries(HUES).map(([name, h]) => [
     name,
-    Object.fromEntries(Object.entries(STEPS).map(([step, pair]) => [step, pair.map(([L, C]) => hex(L, C, h))])),
+    Object.fromEntries(
+      Object.entries({ ...STEPS, ...LIGHT_SOLIDS[name] }).map(([step, pair]) => [
+        step,
+        pair.map(([L, C, deep]) => (deep ? hex(L, C, h[1]) : hex(L, C * (h[2] ?? 1), h[0]))),
+      ]),
+    ),
   ]),
 );
 
@@ -101,7 +130,9 @@ for (const [mode, i] of [["light", 0], ["dark", 1]]) {
 
   for (const hue of Object.keys(HUES)) {
     for (const bg of ["page", "bg", "head-soft", "pre-bg"]) check(`${hue}-text on ${bg}`, r(hue, "text"), g(bg), 4.5);
-    check(`white on ${hue}-solid`, "#ffffff", r(hue, "solid"), 4.5);
+    const onSolid = LIGHT_SOLIDS[hue] ? r(hue, "on-solid") : "#ffffff";
+    check(`on-solid on ${hue}-solid`, onSolid, r(hue, "solid"), 4.5);
+    check(`on-solid on ${hue}-solid-line`, onSolid, r(hue, "solid-line"), 4.5);
     check(`${hue}-tint-text on ${hue}-tint`, r(hue, "tint-text"), r(hue, "tint"), 4.5);
     check(`fg on ${hue}-tint`, g("fg"), r(hue, "tint"), 4.5);
     check(`muted on ${hue}-tint`, g("muted"), r(hue, "tint"), 4.5);

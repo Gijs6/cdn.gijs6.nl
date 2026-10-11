@@ -2,6 +2,7 @@
     --link: var(--orange-text);
     --nav-bg: var(--orange-solid);
     --nav-line: var(--orange-solid-line);
+    --on-nav: var(--orange-on-solid);
     --foot-bg: var(--orange-tint);
     --foot-line: var(--orange-tint-line);
 }
