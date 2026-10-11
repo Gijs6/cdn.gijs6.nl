@@ -25,27 +25,13 @@
     }
 }
 
-.table-wrap,
-.list,
-.empty {
-    margin-inline: calc(-1 * var(--space-sm));
-}
-
 .table-wrap {
     position: relative;
     overflow-x: auto;
 }
 
-:not(.table-wrap) > .table {
-    inline-size: calc(100% + 2 * var(--space-sm));
-    margin-inline: calc(-1 * var(--space-sm));
-}
-
-.table-wrap > .table {
-    inline-size: 100%;
-}
-
 .table {
+    inline-size: 100%;
     margin-block-end: var(--space-2xl);
     border-block: 1px solid var(--rule);
 
@@ -74,6 +60,7 @@
 
 .table .table__actions {
     inline-size: 1%;
+    padding-inline-end: 0;
     text-align: end;
     white-space: nowrap;
 

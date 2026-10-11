@@ -57,9 +57,17 @@
     --space-3xl: 30px;
     --space-4xl: 60px;
 
+    --gutter: 20px;
+
     --font: "Fira Sans", sans-serif;
     --mono: "IBM Plex Mono", monospace;
     --wordmark: "Chakra Petch", var(--font);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --gutter: 15px;
+    }
 }
 
 :root[data-theme="light"] {
