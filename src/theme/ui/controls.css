@@ -95,6 +95,24 @@
     gap: var(--space-xs);
 }
 
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    min-inline-size: 0;
+    margin: 0 0 var(--space-2xl);
+    padding: 0;
+    border: 0;
+
+    .btn + .btn {
+        margin-inline-start: -1px;
+    }
+}
+
+.btn:is([aria-pressed="true"], [aria-current]) {
+    font-weight: 700;
+    background: color-mix(in srgb, var(--btn-hover) 88%, var(--fg));
+}
+
 .input-row {
     display: flex;
     gap: var(--space-xs);
