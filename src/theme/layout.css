@@ -45,7 +45,7 @@
 .navbar__links {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 calc(-1 * var(--space-md));
     padding: 0;
     list-style: none;
 
@@ -115,6 +115,9 @@
 @media (max-width: 600px) {
     .page {
         padding: var(--space-sm) var(--space-xl) var(--space-2xl);
+    }
+    .navbar__links {
+        margin-inline: calc(-1 * var(--space-sm));
     }
     .navbar__links a,
     .navbar__links button {
