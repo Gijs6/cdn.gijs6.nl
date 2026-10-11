@@ -5,7 +5,6 @@
 
 .navbar {
     background: var(--nav-bg);
-    border-bottom: 1px solid var(--nav-line);
 }
 
 .navbar__inner {
