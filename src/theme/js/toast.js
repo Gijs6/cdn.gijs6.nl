@@ -1,5 +1,10 @@
 (function () {
-    var TYPES = { success: "success", warning: "warning", error: "danger", danger: "danger" };
+    var TYPES = {
+        success: "success",
+        warning: "warning",
+        error: "danger",
+        danger: "danger"
+    };
 
     function tray() {
         var t = document.querySelector(".toaster");
@@ -43,10 +48,15 @@
     }
 
     function wire() {
-        document.querySelectorAll(".toast[data-auto-dismiss]:not([data-wired])").forEach(function (el) {
-            el.setAttribute("data-wired", "");
-            autoDismiss(el, parseInt(el.getAttribute("data-auto-dismiss"), 10) || 6000);
-        });
+        document
+            .querySelectorAll(".toast[data-auto-dismiss]:not([data-wired])")
+            .forEach(function (el) {
+                el.setAttribute("data-wired", "");
+                autoDismiss(
+                    el,
+                    parseInt(el.getAttribute("data-auto-dismiss"), 10) || 6000
+                );
+            });
     }
 
     window.toast = toast;
@@ -65,13 +75,26 @@
     function failed(message) {
         return function (e) {
             var target = e.detail.target || e.detail.elt;
-            if (target && target.closest && target.closest("[data-error-inline]")) return;
+            if (
+                target &&
+                target.closest &&
+                target.closest("[data-error-inline]")
+            )
+                return;
             toast(message, { type: "danger" });
         };
     }
 
-    document.addEventListener("htmx:responseError", failed("Something went wrong on our end. Try again later."));
-    document.addEventListener("htmx:sendError", failed("Couldn't reach the server. Check your connection and try again."));
+    document.addEventListener(
+        "htmx:responseError",
+        failed("Something went wrong on our end. Try again later.")
+    );
+    document.addEventListener(
+        "htmx:sendError",
+        failed(
+            "Couldn't reach the server. Check your connection and try again."
+        )
+    );
 
     document.addEventListener("htmx:afterSettle", wire);
     wire();

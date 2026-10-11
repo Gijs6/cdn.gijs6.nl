@@ -1,7 +1,9 @@
 (function () {
     function button(el) {
         if (el.matches("button, input[type=submit]")) return el;
-        return el.querySelector("button[type=submit], button:not([type]), input[type=submit]");
+        return el.querySelector(
+            "button[type=submit], button:not([type]), input[type=submit]"
+        );
     }
 
     function ask(question, el, onConfirm) {
@@ -39,8 +41,14 @@
         cancel.textContent = "Cancel";
         var ok = document.createElement("button");
         ok.type = "button";
-        ok.className = trigger.classList.contains("btn--danger") ? "btn btn--danger" : "btn";
-        ok.textContent = el.getAttribute("data-confirm-action") || (trigger.value && trigger.tagName === "INPUT" ? trigger.value : trigger.textContent.trim());
+        ok.className = trigger.classList.contains("btn--danger")
+            ? "btn btn--danger"
+            : "btn";
+        ok.textContent =
+            el.getAttribute("data-confirm-action") ||
+            (trigger.value && trigger.tagName === "INPUT"
+                ? trigger.value
+                : trigger.textContent.trim());
         actions.appendChild(cancel);
         actions.appendChild(ok);
         dlg.appendChild(actions);
@@ -84,6 +92,6 @@
                 form.removeAttribute("data-confirmed");
             });
         },
-        true,
+        true
     );
 })();
