@@ -59,6 +59,7 @@
 
     --font: "Fira Sans", sans-serif;
     --mono: "IBM Plex Mono", monospace;
+    --wordmark: "Chakra Petch", var(--font);
 }
 
 :root[data-theme="light"] {

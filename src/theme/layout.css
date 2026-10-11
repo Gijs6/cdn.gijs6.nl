@@ -25,6 +25,7 @@
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-md) 0;
+    font-family: var(--wordmark);
     font-size: 16px;
     font-weight: 700;
     color: var(--on-nav);
@@ -197,6 +198,7 @@
 }
 
 .footer__app {
+    font-family: var(--wordmark);
     display: inline-flex;
     align-items: center;
     gap: var(--space-2xs);
