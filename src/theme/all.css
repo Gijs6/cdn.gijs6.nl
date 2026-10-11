@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "base/palette.css";
 @import "base/tokens.css";
 @import "base/elements.css";
 @import "layout.css";

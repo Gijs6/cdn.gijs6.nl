@@ -1,0 +1,7 @@
+:root {
+    --link: var(--cyan-text);
+    --nav-bg: var(--cyan-solid);
+    --nav-line: var(--cyan-solid-line);
+    --foot-bg: var(--cyan-tint);
+    --foot-line: var(--cyan-tint-line);
+}

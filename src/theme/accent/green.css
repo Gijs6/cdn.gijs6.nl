@@ -1,0 +1,7 @@
+:root {
+    --link: var(--green-text);
+    --nav-bg: var(--green-solid);
+    --nav-line: var(--green-solid-line);
+    --foot-bg: var(--green-tint);
+    --foot-line: var(--green-tint-line);
+}

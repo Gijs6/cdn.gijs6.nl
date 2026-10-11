@@ -1,50 +1,39 @@
 :root {
     color-scheme: light dark;
 
-    --bg: light-dark(#eeeeee, #0e1011);
-    --page: light-dark(#ffffff, #222222);
-    --fg: light-dark(#222222, #ffffff);
-    --muted: light-dark(#666666, #b4b4b4);
-    --line: light-dark(#dddddd, #464545);
-    --rule: light-dark(#bbbbbb, #5c5c5c);
-    --page-line: light-dark(#cccccc, #3a3a3a);
-    --head: light-dark(#e8e8e8, #3a3a3a);
-    --head-soft: light-dark(#f4f4f4, #2e2e2e);
-    --link: light-dark(#3b5bdb, #9bafff);
+    --on-solid: var(--white);
 
-    --input-bg: light-dark(#ffffff, #303030);
-    --input-fg: light-dark(#555555, #ffffff);
-    --input-line: light-dark(#939393, #7a7979);
-    --btn-bg: light-dark(#ffffff, #444444);
-    --btn-line: light-dark(#939393, #7a7979);
-    --btn-hover: light-dark(#e6e6e6, #555555);
-    --danger: light-dark(#c9302c, #c0392b);
-    --danger-line: light-dark(#ac2925, #a93226);
+    --link: var(--indigo-text);
+    --nav-bg: var(--indigo-solid);
+    --nav-line: var(--indigo-solid-line);
+    --on-nav: var(--on-solid);
+    --foot-bg: var(--indigo-tint);
+    --foot-line: var(--indigo-tint-line);
 
-    --ok: light-dark(#3c763d, #00bc8c);
-    --warn: light-dark(#8a6d3b, #f39c12);
-    --bad: light-dark(#a94442, #ff7b6b);
+    --ok: var(--green-text);
+    --warn: var(--orange-text);
+    --bad: var(--red-text);
+    --danger: var(--red-solid);
+    --danger-line: var(--red-solid-line);
 
-    --alert-info-bg: light-dark(#d9edf7, #16324a);
-    --alert-info-line: light-dark(#bce8f1, #2f6690);
-    --alert-info-fg: light-dark(#31708f, #9fd3ff);
-    --alert-success-bg: light-dark(#dff0d8, #123b2c);
-    --alert-success-line: light-dark(#d6e9c6, #1f6b4f);
-    --alert-success-fg: light-dark(#3c763d, #7ee2b8);
-    --alert-warning-bg: light-dark(#fcf8e3, #3b2c0c);
-    --alert-warning-line: light-dark(#faebcc, #7a5a16);
-    --alert-warning-fg: light-dark(#8a6d3b, #ffd27a);
-    --alert-danger-bg: light-dark(#f2dede, #451816);
-    --alert-danger-line: light-dark(#ebccd1, #8a2f28);
-    --alert-danger-fg: light-dark(#a94442, #ffb3aa);
+    --alert-info-bg: var(--cyan-tint);
+    --alert-info-line: var(--cyan-tint-line);
+    --alert-info-fg: var(--cyan-tint-text);
+    --alert-success-bg: var(--green-tint);
+    --alert-success-line: var(--green-tint-line);
+    --alert-success-fg: var(--green-tint-text);
+    --alert-warning-bg: var(--orange-tint);
+    --alert-warning-line: var(--orange-tint-line);
+    --alert-warning-fg: var(--orange-tint-text);
+    --alert-danger-bg: var(--red-tint);
+    --alert-danger-line: var(--red-tint-line);
+    --alert-danger-fg: var(--red-tint-text);
 
-    --pre-bg: light-dark(#f5f5f5, #2b2b2b);
-
-    --nav-bg: light-dark(#3b5bdb, #3451c7);
-    --nav-line: #2c45ad;
-    --on-nav: #ffffff;
-    --foot-bg: light-dark(#dbe4ff, #16204a);
-    --foot-line: light-dark(#91a7ff, #2b3d8f);
+    --tooltip-bg: var(--fg);
+    --tooltip-fg: var(--page);
+    --scrim: color-mix(in srgb, var(--black) 70%, transparent);
+    --on-scrim: var(--white);
+    --backdrop: color-mix(in srgb, var(--black) 50%, transparent);
 
     --space-3xs: 2px;
     --space-2xs: 4px;

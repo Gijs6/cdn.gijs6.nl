@@ -177,11 +177,12 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 1.45;
-    color: #ffffff;
+    color: var(--page);
     text-align: center;
     background: var(--muted);
 }
 .count--bad {
+    color: var(--on-solid);
     background: var(--danger);
 }
 

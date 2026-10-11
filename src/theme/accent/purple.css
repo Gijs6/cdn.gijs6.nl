@@ -1,8 +1,7 @@
 :root {
-    --link: light-dark(#7048e8, #bca6fc);
-    --nav-bg: light-dark(#7048e8, #6541d1);
-    --nav-line: #5f3dc4;
-    --on-nav: #ffffff;
-    --foot-bg: light-dark(#e5dbff, #25104f);
-    --foot-line: light-dark(#b197fc, #3f1887);
+    --link: var(--purple-text);
+    --nav-bg: var(--purple-solid);
+    --nav-line: var(--purple-solid-line);
+    --foot-bg: var(--purple-tint);
+    --foot-line: var(--purple-tint-line);
 }

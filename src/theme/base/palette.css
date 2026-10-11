@@ -1,0 +1,84 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --bg: light-dark(#eef0f4, #0d0e11);
+    --page: light-dark(#ffffff, #1a1c1f);
+    --fg: light-dark(#1e1f22, #f0f2f6);
+    --muted: light-dark(#616367, #afb1b5);
+    --line: light-dark(#dfe1e5, #343539);
+    --rule: light-dark(#bcbec2, #4b4d50);
+    --page-line: light-dark(#cfd1d5, #2c2e31);
+    --head: light-dark(#e7e9ee, #2c2e31);
+    --head-soft: light-dark(#f3f5f9, #242528);
+    --pre-bg: light-dark(#f3f5f9, #242528);
+    --input-bg: light-dark(#ffffff, #232427);
+    --input-fg: light-dark(#1e1f22, #f0f2f6);
+    --input-line: light-dark(#84868a, #7e8084);
+    --btn-bg: light-dark(#ffffff, #313336);
+    --btn-line: light-dark(#84868a, #7e8084);
+    --btn-hover: light-dark(#e6e8ec, #3e4043);
+
+    --red-text: light-dark(#af3c3a, #ffa098);
+    --red-solid: light-dark(#c33435, #a5292b);
+    --red-solid-line: light-dark(#9e2225, #861d1f);
+    --red-tint: light-dark(#ffebe9, #391917);
+    --red-tint-line: light-dark(#ffbfb8, #70312e);
+    --red-tint-text: light-dark(#7e302d, #ffbfb8);
+
+    --orange-text: light-dark(#a54c01, #fca676);
+    --orange-solid: light-dark(#b05100, #944300);
+    --orange-solid-line: light-dark(#8b3f01, #773501);
+    --orange-tint: light-dark(#ffece2, #371c0c);
+    --orange-tint-line: light-dark(#ffc2a0, #6d3714);
+    --orange-tint-text: light-dark(#7b3702, #fdc2a2);
+
+    --lime-text: light-dark(#607201, #b4c96d);
+    --lime-solid: light-dark(#677a01, #566600);
+    --lime-solid-line: light-dark(#516000, #445101);
+    --lime-tint: light-dark(#edf4dd, #212708);
+    --lime-tint-line: light-dark(#c9da97, #424e08);
+    --lime-tint-text: light-dark(#475401, #cad99e);
+
+    --green-text: light-dark(#017f31, #86d391);
+    --green-solid: light-dark(#028735, #00722a);
+    --green-solid-line: light-dark(#006b28, #015b21);
+    --green-tint: light-dark(#e3f6e5, #112b16);
+    --green-tint-line: light-dark(#a9e2b0, #1f542a);
+    --green-tint-text: light-dark(#135d27, #aee0b4);
+
+    --teal-text: light-dark(#037a69, #55d7be);
+    --teal-solid: light-dark(#018370, #016d5e);
+    --teal-solid-line: light-dark(#026758, #01574a);
+    --teal-tint: light-dark(#dcf7f0, #002b24);
+    --teal-tint-line: light-dark(#8de5d1, #025448);
+    --teal-tint-text: light-dark(#015a4d, #96e3d1);
+
+    --cyan-text: light-dark(#02758c, #4fd0f1);
+    --cyan-solid: light-dark(#057d96, #01697e);
+    --cyan-solid-line: light-dark(#026376, #025365);
+    --cyan-tint: light-dark(#dbf6fe, #002933);
+    --cyan-tint-line: light-dark(#89e0f8, #025061);
+    --cyan-tint-text: light-dark(#015668, #93def4);
+
+    --indigo-text: light-dark(#3d63be, #9ebdff);
+    --indigo-solid: light-dark(#3b67d7, #3055b6);
+    --indigo-solid-line: light-dark(#2b4fb0, #244395);
+    --indigo-tint: light-dark(#e9f0ff, #18233c);
+    --indigo-tint-line: light-dark(#bbd1ff, #2f4578);
+    --indigo-tint-text: light-dark(#2f4989, #bbd1ff);
+
+    --purple-text: light-dark(#7750b1, #c9acff);
+    --purple-solid: light-dark(#824fc7, #6d41a9);
+    --purple-solid-line: light-dark(#673ba2, #573289);
+    --purple-tint: light-dark(#f2edff, #281e39);
+    --purple-tint-line: light-dark(#d9c6ff, #4f3b71);
+    --purple-tint-text: light-dark(#573c7f, #d9c6fe);
+
+    --pink-text: light-dark(#a23e7c, #f59ecf);
+    --pink-solid: light-dark(#b43788, #982c72);
+    --pink-solid-line: light-dark(#91256c, #7b205b);
+    --pink-tint: light-dark(#fee9f4, #351929);
+    --pink-tint-line: light-dark(#fdbadf, #693253);
+    --pink-tint-text: light-dark(#75305b, #f8bcdd);
+}

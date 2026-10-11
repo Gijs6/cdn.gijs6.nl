@@ -1,8 +1,7 @@
 :root {
-    --link: light-dark(#3b5bdb, #9bafff);
-    --nav-bg: light-dark(#3b5bdb, #3451c7);
-    --nav-line: #2c45ad;
-    --on-nav: #ffffff;
-    --foot-bg: light-dark(#dbe4ff, #16204a);
-    --foot-line: light-dark(#91a7ff, #2b3d8f);
+    --link: var(--indigo-text);
+    --nav-bg: var(--indigo-solid);
+    --nav-line: var(--indigo-solid-line);
+    --foot-bg: var(--indigo-tint);
+    --foot-line: var(--indigo-tint-line);
 }
