@@ -40,14 +40,13 @@
 
 .toast__dismiss {
     padding: 0;
-    color: inherit;
     background: none;
     border: 0;
-    opacity: 0.6;
+    color: var(--muted);
     cursor: pointer;
 
     &:hover {
-        opacity: 1;
+        color: var(--fg);
     }
 }
 
@@ -61,7 +60,7 @@
         inset-inline-start: 50%;
         z-index: 80;
         padding: var(--space-2xs) var(--space-sm);
-        font-size: 12px;
+        font-size: var(--text-sm);
         font-weight: 400;
         line-height: 1.4;
         color: var(--tooltip-fg);
@@ -109,8 +108,55 @@
     }
     a:hover,
     button:hover {
-        background: var(--head);
+        background: var(--btn-hover);
     }
+}
+
+.autocomplete {
+    position: relative;
+}
+
+.autocomplete__menu {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    z-index: 50;
+    max-block-size: 18rem;
+    margin: var(--space-3xs) 0 0;
+    padding: var(--space-xs) 0;
+    overflow-y: auto;
+    list-style: none;
+    background: var(--page);
+    border: 1px solid var(--rule);
+
+    &:empty {
+        display: none;
+    }
+}
+
+.autocomplete__option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 var(--space-md);
+    padding: var(--space-xs) var(--space-lg);
+    color: var(--fg);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible,
+    &.autocomplete__option--active {
+        color: var(--fg);
+        background: var(--btn-hover);
+    }
+    &:focus-visible {
+        outline-offset: -2px;
+    }
+}
+
+.autocomplete__meta {
+    color: var(--muted);
 }
 
 .dialog {
@@ -121,7 +167,7 @@
     border: 1px solid var(--rule);
 
     &::backdrop {
-        background: var(--backdrop, rgb(0 0 0 / 50%));
+        background: var(--backdrop);
     }
 }
 
@@ -129,8 +175,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-xl);
-    border-bottom: 1px solid var(--line);
+    padding: var(--space-md) var(--space-xl);
+    background: var(--head-soft);
+    border-bottom: 1px solid var(--rule);
 
     h2 {
         margin: 0;
