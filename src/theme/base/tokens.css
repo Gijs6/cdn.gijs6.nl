@@ -46,6 +46,12 @@
     --space-3xl: 30px;
     --space-4xl: 60px;
 
+    --text-sm: 12px;
+    --text: 13px;
+    --text-lg: 15px;
+    --text-xl: 22px;
+    --text-2xl: 32px;
+
     --gutter: 20px;
 
     --font: "Fira Sans", sans-serif;

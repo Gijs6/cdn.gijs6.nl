@@ -14,7 +14,7 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: var(--font);
-    font-size: 13px;
+    font-size: var(--text);
     line-height: 1.45;
     color: var(--fg);
     background: var(--bg);
@@ -44,16 +44,14 @@ h4 {
 }
 h1 {
     margin: var(--space-md) 0 var(--space-xl);
-    font-size: 22px;
+    font-size: var(--text-xl);
 }
 h2 {
-    font-size: 15px;
+    font-size: var(--text-lg);
 }
-h3 {
-    font-size: 14px;
-}
+h3,
 h4 {
-    font-size: 13px;
+    font-size: var(--text);
 }
 
 p,
@@ -67,6 +65,12 @@ blockquote {
 
 small {
     font-size: 85%;
+}
+
+blockquote {
+    margin-inline: 0;
+    padding-inline-start: var(--space-lg);
+    border-inline-start: 3px solid var(--rule);
 }
 
 hr {
@@ -87,12 +91,19 @@ samp {
     font-family: var(--mono);
 }
 code {
-    font-size: 12px;
+    font-size: var(--text-sm);
+}
+kbd {
+    display: inline-block;
+    padding: 0 var(--space-2xs);
+    font-size: var(--text-sm);
+    background: var(--page);
+    border: 1px solid var(--rule);
 }
 pre {
     padding: var(--space-md);
     overflow: auto;
-    font-size: 13px;
+    font-size: var(--text);
     color: var(--fg);
     background: var(--pre-bg);
     border: 1px solid var(--rule);
@@ -176,4 +187,17 @@ details > summary {
 
 .muted {
     color: var(--muted);
+}
+
+.lead {
+    font-size: var(--text-lg);
+    color: var(--muted);
+}
+
+.htmx-indicator {
+    visibility: hidden;
+}
+.htmx-request.htmx-indicator,
+.htmx-request .htmx-indicator {
+    visibility: visible;
 }

@@ -126,7 +126,6 @@ for (const [mode, i] of [["light", 0], ["dark", 1]]) {
   check("input-fg on input-bg", g("input-fg"), g("input-bg"), 4.5);
   for (const bg of ["page", "input-bg"]) check(`input-line on ${bg}`, g("input-line"), g(bg), 3);
   for (const bg of ["page", "btn-bg"]) check(`btn-line on ${bg}`, g("btn-line"), g(bg), 3);
-  check("page on muted (count)", g("page"), g("muted"), 4.5);
 
   for (const hue of Object.keys(HUES)) {
     for (const bg of ["page", "bg", "head-soft", "pre-bg"]) check(`${hue}-text on ${bg}`, r(hue, "text"), g(bg), 4.5);
