@@ -25,7 +25,7 @@ const ensure = (p) => mkdirSync(dirname(p), { recursive: true });
 function buildCss() {
   const entries = walk(SRC, (p) => extname(p) === ".css").filter((p) => {
     const rel = relative(SRC, p);
-    return rel === "all.css" || rel.startsWith(`accent${"/"}`);
+    return rel === "all.css" || rel.startsWith(`accent${"/"}`) || rel.startsWith(`addons${"/"}`);
   });
   for (const entry of entries) {
     const rel = relative(SRC, entry);
