@@ -3,7 +3,7 @@
     align-items: center;
     gap: var(--space-xs);
     padding: var(--space-xs) var(--space-lg);
-    font-size: 13px;
+    font-size: var(--text);
     font-weight: 400;
     line-height: 1.45;
     color: var(--fg);
@@ -37,7 +37,7 @@
 
 .btn--sm {
     padding: var(--space-3xs) var(--space-sm);
-    font-size: 12px;
+    font-size: var(--text-sm);
 }
 
 .field {
@@ -47,6 +47,21 @@
 
 .field--narrow {
     max-inline-size: 12em;
+}
+
+.field--wide {
+    max-inline-size: none;
+}
+
+.field__check {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-weight: 700;
+
+    input {
+        margin: 0;
+    }
 }
 
 .field__label {
@@ -77,22 +92,28 @@
 }
 
 .fieldset {
-    min-inline-size: 0;
-    margin: 0 0 var(--space-2xl);
-    padding: var(--space-md) var(--space-xl) var(--space-xl);
-    border: 1px solid var(--rule);
-
-    legend {
-        padding: 0 var(--space-xs);
-        font-size: 15px;
-        font-weight: 700;
+    & > legend {
+        float: left;
+        inline-size: calc(100% + 2 * var(--space-sm));
+    }
+    & > legend + * {
+        clear: both;
     }
 }
 
-.form__actions {
+.form__actions,
+.page-actions {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xs);
+
+    form {
+        display: contents;
+    }
+}
+
+.page-actions {
+    margin-block-end: var(--space-2xl);
 }
 
 .btn-group {
