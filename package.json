@@ -12,5 +12,9 @@
         "esbuild": "0.25.12",
         "lightningcss-cli": "1.33.0",
         "lucide-static": "0.544.0"
+    },
+    "allowScripts": {
+        "esbuild@0.25.12": true,
+        "lightningcss-cli@1.33.0": true
     }
 }
